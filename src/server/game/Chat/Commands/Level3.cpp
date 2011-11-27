@@ -64,6 +64,57 @@
 #include "Group.h"
 #include "ChannelMgr.h"
 
+bool ChatHandler::HandleRepResetCommand(const char* /*args*/)
+{
+    Player* SelectedPlayer = getSelectedPlayer();
+    if(!SelectedPlayer)
+    {
+        SendSysMessage(LANG_NO_CHAR_SELECTED);
+        SetSentErrorMessage(true);
+        return false;
+    }
+
+    uint32 playerid = SelectedPlayer->GetGUIDLow();
+	uint32 accountid = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", playerid);
+
+	QueryResult select = CharacterDatabase.PQuery("SELECT * FROM rep_system WHERE account = %u", accountid);
+	QueryResult query1 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES(%u, '0')", accountid);
+	QueryResult query2 = CharacterDatabase.PQuery("DELETE FROM rep_system_check WHERE receiver = %u", accountid);
+	QueryResult query3 = CharacterDatabase.PQuery("UPDATE rep_system SET points = '0' WHERE account = %u", accountid);
+
+    if(!accountid)
+	{
+		if(!select)
+		{
+			if(!query1)
+				return false;
+			
+			return false;
+		}
+		else
+		{
+			if(!query2)
+			{
+				if(!query3)
+					return false;
+
+				return false;
+			}
+
+			return false;
+		}
+
+		return false;
+	}
+
+	// Player has receive message with info about reset
+	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_RESTARTED, GetNameLink().c_str());
+	// GM receive message with info about reset
+	PSendSysMessage(LANG_REP_RESTARTGM, SelectedPlayer->GetName());
+
+    return true;
+}
+
 bool ChatHandler::HandleMaxSkillCommand(const char* /*args*/)
 {
     Player* SelectedPlayer = getSelectedPlayer();

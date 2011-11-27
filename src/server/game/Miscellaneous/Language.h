@@ -1058,6 +1058,17 @@ enum TrinityStrings
     LANG_AUTO_BROADCAST                 = 11000,
     LANG_INVALID_REALMID                = 11001,
 
+    // REP SYSTEM
+    LANG_REP_ADD                        = 12000,
+    LANG_REP_DEL                        = 12001,
+    LANG_REP_SHOWINFO                   = 12002,
+    LANG_REP_RESTARTED                  = 12003,
+	LANG_REP_RESTARTGM					= 12004,
+	LANG_REP_CANT_TARGET_SELF			= 12005,
+	LANG_REP_HASNT_POINTS				= 12006,
+	LANG_REP_ADDED						= 12007,
+	LANG_REP_DELETED					= 12008,
+
     // NOT RESERVED IDS                   12000-1999999999
     // `db_script_string` table index     2000000000-2000009999 (MIN_DB_SCRIPT_STRING_ID-MAX_DB_SCRIPT_STRING_ID)
     // For other tables maybe             2000010000-2147483647 (max index)

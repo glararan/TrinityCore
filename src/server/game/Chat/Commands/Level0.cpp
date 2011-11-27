@@ -28,6 +28,164 @@
 #include "SystemConfig.h"
 #include "revision.h"
 #include "Util.h"
+#include <cstring>
+#include <time.h>
+
+bool ChatHandler::HandleRepAddCommand(const char* args)
+{
+	Player* SelectedPlayer = getSelectedPlayer();
+	Player* me = m_session->GetPlayer();
+	if(!SelectedPlayer)
+	{
+		SendSysMessage(LANG_NO_CHAR_SELECTED);
+        SetSentErrorMessage(true);
+        return false;
+	}
+
+	uint32 myacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", me->GetGUIDLow());
+	uint32 targetacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", SelectedPlayer->GetGUIDLow());
+
+	time_t now;
+	struct tm ts;
+	char   buf[80];
+	time(&now);
+	ts = *localtime(&now);
+	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
+
+	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
+	QueryResult query2 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES('%u', '-1')", targetacc);
+	QueryResult query3 = CharacterDatabase.PQuery("INSERT INTO rep_system_check (sender, receiver, date) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
+
+	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' + '1' WHERE account = %u", targetacc);
+
+	if(myacc == targetacc)
+	{
+		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
+		SetSentErrorMessage(true);
+		return false;
+	}
+
+	if(!query1)
+	{
+		if(!query2)
+		{
+			if(!query3)
+				return false;
+
+			return false;
+		}
+
+		return false;
+	}
+	else
+	{
+		if(!query4)
+		{
+			if(!query3)
+				return false;
+
+			return false;
+		}
+
+		return false;
+	}
+
+	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_ADD);
+	PSendSysMessage(LANG_REP_ADDED, SelectedPlayer->GetName());
+
+	return true;
+}
+
+bool ChatHandler::HandleRepDelCommand(const char* args)
+{
+	Player* SelectedPlayer = getSelectedPlayer();
+	Player* me = m_session->GetPlayer();
+	if(!SelectedPlayer)
+	{
+		SendSysMessage(LANG_NO_CHAR_SELECTED);
+        SetSentErrorMessage(true);
+        return false;
+	}
+
+	uint32 myacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", me->GetGUIDLow());
+	uint32 targetacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", SelectedPlayer->GetGUIDLow());
+
+	time_t now;
+	struct tm ts;
+	char   buf[80];
+	time(&now);
+	ts = *localtime(&now);
+	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
+
+	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
+	QueryResult query2 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES('%u', '-1')", targetacc);
+	QueryResult query3 = CharacterDatabase.PQuery("INSERT INTO rep_system_check (sender, receiver, date) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
+
+	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' - '1' WHERE account = %u", targetacc);
+
+	if(myacc == targetacc)
+	{
+		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
+		SetSentErrorMessage(true);
+		return false;
+	}
+
+	if(!query1)
+	{
+		if(!query2)
+		{
+			if(!query3)
+				return false;
+
+			return false;
+		}
+
+		return false;
+	}
+	else
+	{
+		if(!query4)
+		{
+			if(!query3)
+				return false;
+
+			return false;
+		}
+
+		return false;
+	}
+
+	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_DEL);
+	PSendSysMessage(LANG_REP_DELETED, SelectedPlayer->GetName());
+
+	return true;
+}
+
+bool ChatHandler::HandleRepInfoCommand(const char* args)
+{
+	Player* SelectedPlayer = getSelectedPlayer();
+	if(!SelectedPlayer)
+	{
+		SendSysMessage(LANG_NO_CHAR_SELECTED);
+        SetSentErrorMessage(true);
+        return false;
+	}
+
+	uint32 playerguid = SelectedPlayer->GetGUIDLow();
+	uint32 paccid = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", playerguid);
+	
+	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", paccid);
+
+	Field* result = query1->Fetch();
+	std::string points = result[0].GetString();
+
+	if(!query1)
+		PSendSysMessage(LANG_REP_HASNT_POINTS, SelectedPlayer->GetName());
+	else
+		PSendSysMessage(LANG_REP_SHOWINFO, SelectedPlayer->GetName(), points.c_str());
+
+	return true;
+}
 
 bool ChatHandler::HandleHelpCommand(const char* args)
 {

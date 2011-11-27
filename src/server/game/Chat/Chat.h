@@ -131,6 +131,12 @@ class ChatHandler
         bool ShowHelpForCommand(ChatCommand* table, const char* cmd);
         bool ShowHelpForSubCommands(ChatCommand* table, char const* cmd, char const* subcmd);
 
+        // REP SYSTEM
+        bool HandleRepAddCommand(const char* args);
+        bool HandleRepDelCommand(const char* args);
+        bool HandleRepInfoCommand(const char* args);
+        bool HandleRepResetCommand(const char* args);
+
         bool HandleNameAnnounceCommand(const char* args);
         bool HandleGMNameAnnounceCommand(const char* args);
         bool HandleGMAnnounceCommand(const char* args);
