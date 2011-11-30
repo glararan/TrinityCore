@@ -1,0 +1,979 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="libmysql\get_password.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libmysql\libmysql.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libmysql\errmsg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql-common\client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql-common\my_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql-common\client_plugin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\net_serv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql-common\pack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\password.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbug\dbug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\charset-def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\charset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\checksum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\default.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\errors.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_cache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_dirname.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_fn_ext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_format.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_getdate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_iocache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_iocache2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_keycache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_keycaches.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_loadpath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_pack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_path.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_qsort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_qsort2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_radix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_same.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_sort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_soundex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_arr_appstr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_tempdir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_tempfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_unixpath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mf_wcomp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\mulalloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_access.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_aes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_alloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_bit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_bitmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_chsize.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_copy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_create.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_delete.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_div.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_fopen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_fstream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_gethostbyname.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_gethwaddr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_getsystime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_getwd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_handler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_lock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_malloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_mess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_mkdir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_mmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_once.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_pread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_pthread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_quick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_redel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_rename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_seek.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_sleep.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_static.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_symlink.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_symlink2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_sync.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_thr_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\ptr_cmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\queues.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\stacktrace.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\rijndael.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\sha1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\thr_alarm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\thr_lock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\thr_mutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\thr_rwlock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\tree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\typelib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\base64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_memmem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_getpagesize.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\lf_alloc-pin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\lf_dynarray.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\lf_hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_atomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_getncpus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_rdtsc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_winthread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_wincond.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_winerr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_winfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_windac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mysys\my_conio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\bchange.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\bmove_upp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-big5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-bin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-cp932.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-czech.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-euc_kr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-extra.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-gb2312.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-gbk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-latin1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-mb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-simple.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-tis620.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-uca.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-ucs2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype-win1250ch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\ctype.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\decimal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\dtoa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\int2str.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\is_prefix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\llstr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\longlong2str.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\my_strtoll10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\my_vsnprintf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\str2int.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\str_alloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strcend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strfill.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strmake.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strmov.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strnmov.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strxmov.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strxnmov.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\xml.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\my_strchr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strcont.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings\strappend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vio\vio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vio\viosocket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vio\viossl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vio\viosslfactories.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libmysql\libmysql_exports.def">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="versioninfo_dll.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BBA3DF8-A87E-414E-9AB0-2FFCB0E04EA0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libmysql\get_password.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="libmysql\libmysql.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="libmysql\errmsg.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="sql-common\client.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="sql-common\my_time.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="sql-common\client_plugin.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="sql\net_serv.cc">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="sql-common\pack.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="sql\password.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="dbug\dbug.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\array.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\charset-def.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\charset.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\checksum.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\default.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\errors.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\hash.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\list.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\md5.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_cache.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_dirname.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_fn_ext.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_format.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_getdate.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_iocache.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_iocache2.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_keycache.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_keycaches.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_loadpath.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_pack.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_path.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_qsort.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_qsort2.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_radix.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_same.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_sort.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_soundex.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_arr_appstr.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_tempdir.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_tempfile.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_unixpath.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mf_wcomp.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\mulalloc.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_access.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_aes.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_alloc.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_bit.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_bitmap.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_chsize.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_compress.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_copy.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_create.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_delete.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_div.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_error.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_file.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_fopen.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_fstream.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_gethostbyname.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_gethwaddr.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_getopt.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_getsystime.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_getwd.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_handler.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_init.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_lib.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_lock.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_malloc.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_mess.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_mkdir.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_mmap.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_once.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_open.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_pread.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_pthread.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_quick.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_read.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_redel.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_rename.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_seek.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_sleep.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_static.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_symlink.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_symlink2.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_sync.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_thr_init.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_write.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\ptr_cmp.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\queues.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\stacktrace.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\rijndael.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\sha1.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\string.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\thr_alarm.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\thr_lock.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\thr_mutex.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\thr_rwlock.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\tree.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\typelib.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\base64.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_memmem.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_getpagesize.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\lf_alloc-pin.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\lf_dynarray.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\lf_hash.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_atomic.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_getncpus.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_rdtsc.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_winthread.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_wincond.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_winerr.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_winfile.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_windac.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mysys\my_conio.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\bchange.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\bmove_upp.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-big5.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-bin.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-cp932.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-czech.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-euc_kr.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-extra.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-gb2312.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-gbk.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-latin1.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-mb.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-simple.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-tis620.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-uca.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-ucs2.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-utf8.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype-win1250ch.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\ctype.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\decimal.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\dtoa.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\int2str.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\is_prefix.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\llstr.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\longlong2str.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\my_strtoll10.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\my_vsnprintf.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\str2int.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\str_alloc.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strcend.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strend.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strfill.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strmake.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strmov.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strnmov.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strxmov.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strxnmov.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\xml.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\my_strchr.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strcont.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="strings\strappend.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="vio\vio.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="vio\viosocket.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="vio\viossl.c">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="vio\viosslfactories.c">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

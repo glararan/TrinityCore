@@ -1,0 +1,39 @@
+# CMake generation dependency list for this directory.
+C:/github/TrinityCore/CMakeLists.txt
+C:/github/TrinityCore/CMakeFiles/CMakeSystem.cmake
+C:/github/TrinityCore/CMakeFiles/CMakeCCompiler.cmake
+C:/github/TrinityCore/CMakeFiles/CMakeCXXCompiler.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-cl.cmake
+C:/github/TrinityCore/CMakeFiles/CMakeCPlatform.cmake
+C:/github/TrinityCore/CMakeFiles/CMakeCXXPlatform.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/cl.cmake
+C:/github/TrinityCore/CMakeFiles/CMakeRCCompiler.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeRCInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-cl.cmake
+C:/github/TrinityCore/CMakeFiles/CMakeCPlatform.cmake
+C:/github/TrinityCore/CMakeFiles/CMakeCXXPlatform.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/cl.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckCXXSourceRuns.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFiles.cmake
+C:/github/TrinityCore/cmake/options.cmake
+C:/github/TrinityCore/cmake/macros/CheckPlatform.cmake
+C:/github/TrinityCore/cmake/platform/settings.cmake
+C:/github/TrinityCore/cmake/platform/win/settings.cmake
+C:/github/TrinityCore/cmake/compiler/msvc/settings.cmake
+C:/github/TrinityCore/cmake/macros/FindPCHSupport.cmake
+C:/github/TrinityCore/cmake/macros/FindACE.cmake
+C:/github/TrinityCore/cmake/macros/FindOpenSSL.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+C:/github/TrinityCore/cmake/genrev.cmake
+C:/github/TrinityCore/cmake/macros/EnsureVersion.cmake
+C:/github/TrinityCore/cmake/showoptions.cmake

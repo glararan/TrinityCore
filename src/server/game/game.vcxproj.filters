@@ -1,0 +1,1609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="PrecompiledHeaders\gamePCH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Accounts\AccountMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Achievements\AchievementMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Addons\AddonMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\CombatAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\GameObjectAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\GuardAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\PassiveAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\PetAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\ReactorAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\TotemAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CoreAI\UnitAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CreatureAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CreatureAIRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\CreatureAISelector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\EventAI\CreatureEventAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\EventAI\CreatureEventAIMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\ScriptedAI\ScriptedCreature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\ScriptedAI\ScriptedEscortAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\ScriptedAI\ScriptedFollowerAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\ScriptedAI\ScriptedSimpleAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\SmartScripts\SmartAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\SmartScripts\SmartScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AI\SmartScripts\SmartScriptMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AuctionHouse\AuctionHouseMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\ArenaTeam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\ArenaTeamMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Battleground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\BattlegroundMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\BattlegroundQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundAA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundAB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundAV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundBE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundDS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundEY.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundIC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundNA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundRB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundRL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundRV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundSA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlegrounds\Zones\BattlegroundWS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar\Calendar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Channels\Channel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Channels\ChannelMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Chat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\ChatLink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Commands\Level0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Commands\Level1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Commands\Level2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Commands\Level3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Commands\TicketCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Combat\HostileRefManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Combat\ThreatManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Conditions\ConditionMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Conditions\DisableMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStores\DBCStores.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonFinding\LFGGroupData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonFinding\LFGMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonFinding\LFGPlayerData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonFinding\LFGScripts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Corpse\Corpse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Creature\Creature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Creature\CreatureGroups.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Creature\GossipDef.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Creature\TemporarySummon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\DynamicObject\DynamicObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\GameObject\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Item\Container\Bag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Item\Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Item\ItemEnchantmentMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Object\Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Object\ObjectPosSelector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Object\Updates\UpdateData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Pet\Pet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Player\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Player\SocialMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Totem\Totem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Transport\Transport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Unit\StatSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Unit\Unit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Vehicle\Vehicle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Events\GameEventMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals\ObjectAccessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals\ObjectMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grids\GridStates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grids\Notifiers\GridNotifiers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grids\ObjectGridLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Groups\Group.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Groups\GroupMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Groups\GroupReference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Guilds\Guild.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Guilds\GuildMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Instances\InstanceSaveMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Instances\InstanceScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loot\LootMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mails\Mail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Maps\Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Maps\MapInstanced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Maps\MapManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Maps\MapUpdater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\DestinationHolder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\FollowerReference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MotionMaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\ConfusedMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\FleeingMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\HomeMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\IdleMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\PointMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\RandomMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\TargetedMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\MovementGenerators\WaypointMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\Waypoints\WaypointManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutdoorPvP\OutdoorPvP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutdoorPvP\OutdoorPvPMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pools\PoolMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Quests\QuestDef.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reputation\ReputationMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\MapScripts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\ScriptLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\ScriptMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\ScriptSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\AddonHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\ArenaTeamHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\AuctionHouseHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\AuthHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\BattleGroundHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\CalendarHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\ChannelHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\CharacterHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\ChatHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\CombatHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\DuelHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\GroupHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\GuildHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\ItemHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\LFGHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\LootHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\MailHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\MiscHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\MovementHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\NPCHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\PetHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\PetitionsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\QueryHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\QuestHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\ReferAFriendHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\SkillHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\SpellHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\TaxiHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\TicketHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\TradeHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\VehicleHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Handlers\VoiceChatHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\Opcodes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Protocol\WorldLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\WorldSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\WorldSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\WorldSocketMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skills\SkillDiscovery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skills\SkillExtraItems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells\Auras\SpellAuraEffects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells\Auras\SpellAuras.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells\Spell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells\SpellEffects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells\SpellInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells\SpellMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells\SpellScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texts\CreatureTextMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\CharacterDatabaseCleaner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\PlayerDump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tickets\TicketMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Weather\Weather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Weather\WeatherMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PrecompiledHeaders\gamePCH.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Accounts\AccountMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Achievements\AchievementMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Addons\AddonMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\CombatAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\GameObjectAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\GuardAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\PassiveAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\PetAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\ReactorAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\TotemAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CoreAI\UnitAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CreatureAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CreatureAIFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CreatureAIImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CreatureAIRegistry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\CreatureAISelector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\EventAI\CreatureEventAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\EventAI\CreatureEventAIMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\ScriptedAI\ScriptedCreature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\ScriptedAI\ScriptedEscortAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\ScriptedAI\ScriptedFollowerAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\ScriptedAI\ScriptedGossip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\ScriptedAI\ScriptedSimpleAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\SmartScripts\SmartAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\SmartScripts\SmartScript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI\SmartScripts\SmartScriptMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AuctionHouse\AuctionHouseMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\ArenaTeam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\ArenaTeamMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Battleground.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\BattlegroundMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\BattlegroundQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundAA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundAB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundAV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundBE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundDS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundEY.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundIC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundNA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundRB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundRL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundRV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundSA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlegrounds\Zones\BattlegroundWS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Calendar\Calendar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\Channels\Channel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\Channels\ChannelMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\Chat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\ChatLink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Combat\HostileRefManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Combat\ThreatManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Combat\UnitEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Conditions\ConditionMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Conditions\DisableMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStores\DBCEnums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStores\DBCfmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStores\DBCStores.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStores\DBCStructure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonFinding\LFG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonFinding\LFGGroupData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonFinding\LFGMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonFinding\LFGPlayerData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonFinding\LFGScripts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Corpse\Corpse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Creature\Creature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Creature\CreatureGroups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Creature\GossipDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Creature\TemporarySummon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\DynamicObject\DynamicObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\GameObject\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Item\Container\Bag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Item\Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Item\ItemEnchantmentMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Item\ItemPrototype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Object\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Object\ObjectDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Object\ObjectPosSelector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Object\Updates\UpdateData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Object\Updates\UpdateFields.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Object\Updates\UpdateMask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Pet\Pet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Player\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Player\SocialMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Totem\Totem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Transport\Transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Unit\Unit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Vehicle\Vehicle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Vehicle\VehicleDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\GameEventMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals\ObjectAccessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals\ObjectMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\Cells\Cell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\Cells\CellImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\GridDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\GridLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\GridReference.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\GridRefManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\GridStates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\NGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\Notifiers\GridNotifiers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\Notifiers\GridNotifiersImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grids\ObjectGridLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Groups\Group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Groups\GroupMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Groups\GroupReference.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Groups\GroupRefManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Guilds\Guild.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Guilds\GuildMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Instances\InstanceSaveMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Instances\InstanceScript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loot\LootMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mails\Mail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps\Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps\MapInstanced.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps\MapManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps\MapReference.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps\MapRefManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps\MapUpdater.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps\ZoneScript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Formulas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Language.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\SharedDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\DestinationHolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\DestinationHolderImp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\FollowerReference.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\FollowerRefManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MotionMaster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGeneratorImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\ConfusedMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\FleeingMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\HomeMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\IdleMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\PointMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\RandomMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\TargetedMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\MovementGenerators\WaypointMovementGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\Traveller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\Waypoints\Path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\Waypoints\WaypointManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutdoorPvP\OutdoorPvP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutdoorPvP\OutdoorPvPMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pools\PoolMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Quests\QuestDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reputation\ReputationMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\ScriptLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\ScriptMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\ScriptSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Protocol\Handlers\AddonHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Protocol\Handlers\NPCHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Protocol\Opcodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Protocol\WorldLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\WorldSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\WorldSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\WorldSocketAcceptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\WorldSocketMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\SkillDiscovery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\SkillExtraItems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells\Auras\SpellAuraDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells\Auras\SpellAuraEffects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells\Auras\SpellAuras.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells\Spell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells\SpellInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells\SpellMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells\SpellScript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texts\CreatureTextMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\CharacterDatabaseCleaner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\PlayerDump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tickets\TicketMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Weather\Weather.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Weather\WeatherMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="World\World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BBA3DF8-A87E-414E-9AB0-2FFCB0E04EA0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A267A383-B1B3-49D1-ACD6-F0FCF0EB1010}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PrecompiledHeaders\gamePCH.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Accounts\AccountMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Achievements\AchievementMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Addons\AddonMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\CombatAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\GameObjectAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\GuardAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\PassiveAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\PetAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\ReactorAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\TotemAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CoreAI\UnitAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CreatureAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CreatureAIRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\CreatureAISelector.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\EventAI\CreatureEventAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\EventAI\CreatureEventAIMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\ScriptedAI\ScriptedCreature.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\ScriptedAI\ScriptedEscortAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\ScriptedAI\ScriptedFollowerAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\ScriptedAI\ScriptedSimpleAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\SmartScripts\SmartAI.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\SmartScripts\SmartScript.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AI\SmartScripts\SmartScriptMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="AuctionHouse\AuctionHouseMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\ArenaTeam.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\ArenaTeamMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Battleground.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\BattlegroundMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\BattlegroundQueue.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundAA.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundAB.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundAV.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundBE.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundDS.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundEY.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundIC.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundNA.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundRB.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundRL.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundRV.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundSA.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Battlegrounds\Zones\BattlegroundWS.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Calendar\Calendar.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Channels\Channel.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Channels\ChannelMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Chat.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\ChatLink.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Commands\Level0.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Commands\Level1.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Commands\Level2.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Commands\Level3.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Chat\Commands\TicketCommands.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Combat\HostileRefManager.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Combat\ThreatManager.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Conditions\ConditionMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Conditions\DisableMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="DataStores\DBCStores.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="DungeonFinding\LFGGroupData.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="DungeonFinding\LFGMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="DungeonFinding\LFGPlayerData.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="DungeonFinding\LFGScripts.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Corpse\Corpse.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Creature\Creature.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Creature\CreatureGroups.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Creature\GossipDef.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Creature\TemporarySummon.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\DynamicObject\DynamicObject.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\GameObject\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Item\Container\Bag.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Item\Item.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Item\ItemEnchantmentMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Object\Object.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Object\ObjectPosSelector.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Object\Updates\UpdateData.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Pet\Pet.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Player\Player.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Player\SocialMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Totem\Totem.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Transport\Transport.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Unit\StatSystem.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Unit\Unit.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Entities\Vehicle\Vehicle.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Events\GameEventMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Globals\ObjectAccessor.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Globals\ObjectMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Grids\GridStates.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Grids\Notifiers\GridNotifiers.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Grids\ObjectGridLoader.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Groups\Group.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Groups\GroupMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Groups\GroupReference.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Guilds\Guild.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Guilds\GuildMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Instances\InstanceSaveMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Instances\InstanceScript.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Loot\LootMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Mails\Mail.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Maps\Map.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Maps\MapInstanced.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Maps\MapManager.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Maps\MapUpdater.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\DestinationHolder.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\FollowerReference.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MotionMaster.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\ConfusedMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\FleeingMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\HomeMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\IdleMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\PointMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\RandomMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\TargetedMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\MovementGenerators\WaypointMovementGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Movement\Waypoints\WaypointManager.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="OutdoorPvP\OutdoorPvP.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="OutdoorPvP\OutdoorPvPMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Pools\PoolMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Quests\QuestDef.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Reputation\ReputationMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Scripting\MapScripts.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Scripting\ScriptLoader.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Scripting\ScriptMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Scripting\ScriptSystem.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\AddonHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\ArenaTeamHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\AuctionHouseHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\AuthHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\BattleGroundHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\CalendarHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\ChannelHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\CharacterHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\ChatHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\CombatHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\DuelHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\GroupHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\GuildHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\ItemHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\LFGHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\LootHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\MailHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\MiscHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\MovementHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\NPCHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\PetHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\PetitionsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\QueryHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\QuestHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\ReferAFriendHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\SkillHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\SpellHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\TaxiHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\TicketHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\TradeHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\VehicleHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Handlers\VoiceChatHandler.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\Opcodes.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\Protocol\WorldLog.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\WorldSession.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\WorldSocket.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Server\WorldSocketMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Skills\SkillDiscovery.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Skills\SkillExtraItems.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Spells\Auras\SpellAuraEffects.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Spells\Auras\SpellAuras.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Spells\Spell.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Spells\SpellEffects.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Spells\SpellInfo.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Spells\SpellMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Spells\SpellScript.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Texts\CreatureTextMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Tools\CharacterDatabaseCleaner.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Tools\PlayerDump.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Tickets\TicketMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Weather\Weather.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Weather\WeatherMgr.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="World\World.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

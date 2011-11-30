@@ -1,0 +1,158 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{5A8E6DFE-A748-49D0-9788-D47C38CFD21A}</ProjectGUID>
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>INSTALL</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/game;C:/github/TrinityCore;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/zlib;C:/github/TrinityCore/src/server/collision;C:/github/TrinityCore/src/server/collision/Management;C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Cryptography/Authentication;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic/CountedReference;C:/github/TrinityCore/src/server/shared/Dynamic/LinkedReference;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Policies;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Accounts;C:/github/TrinityCore/src/server/game/Achievements;C:/github/TrinityCore/src/server/game/Addons;C:/github/TrinityCore/src/server/game/AI;C:/github/TrinityCore/src/server/game/AI/CoreAI;C:/github/TrinityCore/src/server/game/AI/EventAI;C:/github/TrinityCore/src/server/game/AI/ScriptedAI;C:/github/TrinityCore/src/server/game/AI/SmartScripts;C:/github/TrinityCore/src/server/game/AuctionHouse;C:/github/TrinityCore/src/server/game/Battlegrounds;C:/github/TrinityCore/src/server/game/Battlegrounds/Zones;C:/github/TrinityCore/src/server/game/Calendar;C:/github/TrinityCore/src/server/game/Chat;C:/github/TrinityCore/src/server/game/Chat/Channels;C:/github/TrinityCore/src/server/game/Chat/Commands;C:/github/TrinityCore/src/server/game/Combat;C:/github/TrinityCore/src/server/game/Conditions;C:/github/TrinityCore/src/server/game/DataStores;C:/github/TrinityCore/src/server/game/DungeonFinding;C:/github/TrinityCore/src/server/game/Entities;C:/github/TrinityCore/src/server/game/Entities/Creature;C:/github/TrinityCore/src/server/game/Entities/Corpse;C:/github/TrinityCore/src/server/game/Entities/DynamicObject;C:/github/TrinityCore/src/server/game/Entities/GameObject;C:/github/TrinityCore/src/server/game/Entities/Item;C:/github/TrinityCore/src/server/game/Entities/Item/Container;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/src/server/game/Entities/Object/Updates;C:/github/TrinityCore/src/server/game/Entities/Pet;C:/github/TrinityCore/src/server/game/Entities/Player;C:/github/TrinityCore/src/server/game/Entities/Totem;C:/github/TrinityCore/src/server/game/Entities/Unit;C:/github/TrinityCore/src/server/game/Entities/Vehicle;C:/github/TrinityCore/src/server/game/Entities/Transport;C:/github/TrinityCore/src/server/game/Events;C:/github/TrinityCore/src/server/game/Globals;C:/github/TrinityCore/src/server/game/Grids/Cells;C:/github/TrinityCore/src/server/game/Grids/Notifiers;C:/github/TrinityCore/src/server/game/Grids;C:/github/TrinityCore/src/server/game/Groups;C:/github/TrinityCore/src/server/game/Guilds;C:/github/TrinityCore/src/server/game/Instances;C:/github/TrinityCore/src/server/game/Loot;C:/github/TrinityCore/src/server/game/Mails;C:/github/TrinityCore/src/server/game/Maps;C:/github/TrinityCore/src/server/game/Miscellaneous;C:/github/TrinityCore/src/server/game/Movement;C:/github/TrinityCore/src/server/game/Movement/MovementGenerators;C:/github/TrinityCore/src/server/game/Movement/Waypoints;C:/github/TrinityCore/src/server/game/OutdoorPvP;C:/github/TrinityCore/src/server/game/Pools;C:/github/TrinityCore/src/server/game/PrecompiledHeaders;C:/github/TrinityCore/src/server/game/Quests;C:/github/TrinityCore/src/server/game/Reputation;C:/github/TrinityCore/src/server/game/Scripting;C:/github/TrinityCore/src/server/game/Server/Protocol;C:/github/TrinityCore/src/server/game/Server/Protocol/Handlers;C:/github/TrinityCore/src/server/game/Server;C:/github/TrinityCore/src/server/game/Skills;C:/github/TrinityCore/src/server/game/Spells;C:/github/TrinityCore/src/server/game/Spells/Auras;C:/github/TrinityCore/src/server/game/Texts;C:/github/TrinityCore/src/server/game/Tools;C:/github/TrinityCore/src/server/game/Tickets;C:/github/TrinityCore/src/server/game/Weather;C:/github/TrinityCore/src/server/game/World;C:/github/TrinityCore/src/server/scripts/PrecompiledHeaders;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+if errorlevel 1 goto VCReportError</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/game;C:/github/TrinityCore;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/zlib;C:/github/TrinityCore/src/server/collision;C:/github/TrinityCore/src/server/collision/Management;C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Cryptography/Authentication;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic/CountedReference;C:/github/TrinityCore/src/server/shared/Dynamic/LinkedReference;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Policies;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Accounts;C:/github/TrinityCore/src/server/game/Achievements;C:/github/TrinityCore/src/server/game/Addons;C:/github/TrinityCore/src/server/game/AI;C:/github/TrinityCore/src/server/game/AI/CoreAI;C:/github/TrinityCore/src/server/game/AI/EventAI;C:/github/TrinityCore/src/server/game/AI/ScriptedAI;C:/github/TrinityCore/src/server/game/AI/SmartScripts;C:/github/TrinityCore/src/server/game/AuctionHouse;C:/github/TrinityCore/src/server/game/Battlegrounds;C:/github/TrinityCore/src/server/game/Battlegrounds/Zones;C:/github/TrinityCore/src/server/game/Calendar;C:/github/TrinityCore/src/server/game/Chat;C:/github/TrinityCore/src/server/game/Chat/Channels;C:/github/TrinityCore/src/server/game/Chat/Commands;C:/github/TrinityCore/src/server/game/Combat;C:/github/TrinityCore/src/server/game/Conditions;C:/github/TrinityCore/src/server/game/DataStores;C:/github/TrinityCore/src/server/game/DungeonFinding;C:/github/TrinityCore/src/server/game/Entities;C:/github/TrinityCore/src/server/game/Entities/Creature;C:/github/TrinityCore/src/server/game/Entities/Corpse;C:/github/TrinityCore/src/server/game/Entities/DynamicObject;C:/github/TrinityCore/src/server/game/Entities/GameObject;C:/github/TrinityCore/src/server/game/Entities/Item;C:/github/TrinityCore/src/server/game/Entities/Item/Container;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/src/server/game/Entities/Object/Updates;C:/github/TrinityCore/src/server/game/Entities/Pet;C:/github/TrinityCore/src/server/game/Entities/Player;C:/github/TrinityCore/src/server/game/Entities/Totem;C:/github/TrinityCore/src/server/game/Entities/Unit;C:/github/TrinityCore/src/server/game/Entities/Vehicle;C:/github/TrinityCore/src/server/game/Entities/Transport;C:/github/TrinityCore/src/server/game/Events;C:/github/TrinityCore/src/server/game/Globals;C:/github/TrinityCore/src/server/game/Grids/Cells;C:/github/TrinityCore/src/server/game/Grids/Notifiers;C:/github/TrinityCore/src/server/game/Grids;C:/github/TrinityCore/src/server/game/Groups;C:/github/TrinityCore/src/server/game/Guilds;C:/github/TrinityCore/src/server/game/Instances;C:/github/TrinityCore/src/server/game/Loot;C:/github/TrinityCore/src/server/game/Mails;C:/github/TrinityCore/src/server/game/Maps;C:/github/TrinityCore/src/server/game/Miscellaneous;C:/github/TrinityCore/src/server/game/Movement;C:/github/TrinityCore/src/server/game/Movement/MovementGenerators;C:/github/TrinityCore/src/server/game/Movement/Waypoints;C:/github/TrinityCore/src/server/game/OutdoorPvP;C:/github/TrinityCore/src/server/game/Pools;C:/github/TrinityCore/src/server/game/PrecompiledHeaders;C:/github/TrinityCore/src/server/game/Quests;C:/github/TrinityCore/src/server/game/Reputation;C:/github/TrinityCore/src/server/game/Scripting;C:/github/TrinityCore/src/server/game/Server/Protocol;C:/github/TrinityCore/src/server/game/Server/Protocol/Handlers;C:/github/TrinityCore/src/server/game/Server;C:/github/TrinityCore/src/server/game/Skills;C:/github/TrinityCore/src/server/game/Spells;C:/github/TrinityCore/src/server/game/Spells/Auras;C:/github/TrinityCore/src/server/game/Texts;C:/github/TrinityCore/src/server/game/Tools;C:/github/TrinityCore/src/server/game/Tickets;C:/github/TrinityCore/src/server/game/Weather;C:/github/TrinityCore/src/server/game/World;C:/github/TrinityCore/src/server/scripts/PrecompiledHeaders;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+if errorlevel 1 goto VCReportError</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/game;C:/github/TrinityCore;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/zlib;C:/github/TrinityCore/src/server/collision;C:/github/TrinityCore/src/server/collision/Management;C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Cryptography/Authentication;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic/CountedReference;C:/github/TrinityCore/src/server/shared/Dynamic/LinkedReference;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Policies;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Accounts;C:/github/TrinityCore/src/server/game/Achievements;C:/github/TrinityCore/src/server/game/Addons;C:/github/TrinityCore/src/server/game/AI;C:/github/TrinityCore/src/server/game/AI/CoreAI;C:/github/TrinityCore/src/server/game/AI/EventAI;C:/github/TrinityCore/src/server/game/AI/ScriptedAI;C:/github/TrinityCore/src/server/game/AI/SmartScripts;C:/github/TrinityCore/src/server/game/AuctionHouse;C:/github/TrinityCore/src/server/game/Battlegrounds;C:/github/TrinityCore/src/server/game/Battlegrounds/Zones;C:/github/TrinityCore/src/server/game/Calendar;C:/github/TrinityCore/src/server/game/Chat;C:/github/TrinityCore/src/server/game/Chat/Channels;C:/github/TrinityCore/src/server/game/Chat/Commands;C:/github/TrinityCore/src/server/game/Combat;C:/github/TrinityCore/src/server/game/Conditions;C:/github/TrinityCore/src/server/game/DataStores;C:/github/TrinityCore/src/server/game/DungeonFinding;C:/github/TrinityCore/src/server/game/Entities;C:/github/TrinityCore/src/server/game/Entities/Creature;C:/github/TrinityCore/src/server/game/Entities/Corpse;C:/github/TrinityCore/src/server/game/Entities/DynamicObject;C:/github/TrinityCore/src/server/game/Entities/GameObject;C:/github/TrinityCore/src/server/game/Entities/Item;C:/github/TrinityCore/src/server/game/Entities/Item/Container;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/src/server/game/Entities/Object/Updates;C:/github/TrinityCore/src/server/game/Entities/Pet;C:/github/TrinityCore/src/server/game/Entities/Player;C:/github/TrinityCore/src/server/game/Entities/Totem;C:/github/TrinityCore/src/server/game/Entities/Unit;C:/github/TrinityCore/src/server/game/Entities/Vehicle;C:/github/TrinityCore/src/server/game/Entities/Transport;C:/github/TrinityCore/src/server/game/Events;C:/github/TrinityCore/src/server/game/Globals;C:/github/TrinityCore/src/server/game/Grids/Cells;C:/github/TrinityCore/src/server/game/Grids/Notifiers;C:/github/TrinityCore/src/server/game/Grids;C:/github/TrinityCore/src/server/game/Groups;C:/github/TrinityCore/src/server/game/Guilds;C:/github/TrinityCore/src/server/game/Instances;C:/github/TrinityCore/src/server/game/Loot;C:/github/TrinityCore/src/server/game/Mails;C:/github/TrinityCore/src/server/game/Maps;C:/github/TrinityCore/src/server/game/Miscellaneous;C:/github/TrinityCore/src/server/game/Movement;C:/github/TrinityCore/src/server/game/Movement/MovementGenerators;C:/github/TrinityCore/src/server/game/Movement/Waypoints;C:/github/TrinityCore/src/server/game/OutdoorPvP;C:/github/TrinityCore/src/server/game/Pools;C:/github/TrinityCore/src/server/game/PrecompiledHeaders;C:/github/TrinityCore/src/server/game/Quests;C:/github/TrinityCore/src/server/game/Reputation;C:/github/TrinityCore/src/server/game/Scripting;C:/github/TrinityCore/src/server/game/Server/Protocol;C:/github/TrinityCore/src/server/game/Server/Protocol/Handlers;C:/github/TrinityCore/src/server/game/Server;C:/github/TrinityCore/src/server/game/Skills;C:/github/TrinityCore/src/server/game/Spells;C:/github/TrinityCore/src/server/game/Spells/Auras;C:/github/TrinityCore/src/server/game/Texts;C:/github/TrinityCore/src/server/game/Tools;C:/github/TrinityCore/src/server/game/Tickets;C:/github/TrinityCore/src/server/game/Weather;C:/github/TrinityCore/src/server/game/World;C:/github/TrinityCore/src/server/scripts/PrecompiledHeaders;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+if errorlevel 1 goto VCReportError</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/game;C:/github/TrinityCore;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/zlib;C:/github/TrinityCore/src/server/collision;C:/github/TrinityCore/src/server/collision/Management;C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Cryptography/Authentication;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic/CountedReference;C:/github/TrinityCore/src/server/shared/Dynamic/LinkedReference;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Policies;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Accounts;C:/github/TrinityCore/src/server/game/Achievements;C:/github/TrinityCore/src/server/game/Addons;C:/github/TrinityCore/src/server/game/AI;C:/github/TrinityCore/src/server/game/AI/CoreAI;C:/github/TrinityCore/src/server/game/AI/EventAI;C:/github/TrinityCore/src/server/game/AI/ScriptedAI;C:/github/TrinityCore/src/server/game/AI/SmartScripts;C:/github/TrinityCore/src/server/game/AuctionHouse;C:/github/TrinityCore/src/server/game/Battlegrounds;C:/github/TrinityCore/src/server/game/Battlegrounds/Zones;C:/github/TrinityCore/src/server/game/Calendar;C:/github/TrinityCore/src/server/game/Chat;C:/github/TrinityCore/src/server/game/Chat/Channels;C:/github/TrinityCore/src/server/game/Chat/Commands;C:/github/TrinityCore/src/server/game/Combat;C:/github/TrinityCore/src/server/game/Conditions;C:/github/TrinityCore/src/server/game/DataStores;C:/github/TrinityCore/src/server/game/DungeonFinding;C:/github/TrinityCore/src/server/game/Entities;C:/github/TrinityCore/src/server/game/Entities/Creature;C:/github/TrinityCore/src/server/game/Entities/Corpse;C:/github/TrinityCore/src/server/game/Entities/DynamicObject;C:/github/TrinityCore/src/server/game/Entities/GameObject;C:/github/TrinityCore/src/server/game/Entities/Item;C:/github/TrinityCore/src/server/game/Entities/Item/Container;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/src/server/game/Entities/Object/Updates;C:/github/TrinityCore/src/server/game/Entities/Pet;C:/github/TrinityCore/src/server/game/Entities/Player;C:/github/TrinityCore/src/server/game/Entities/Totem;C:/github/TrinityCore/src/server/game/Entities/Unit;C:/github/TrinityCore/src/server/game/Entities/Vehicle;C:/github/TrinityCore/src/server/game/Entities/Transport;C:/github/TrinityCore/src/server/game/Events;C:/github/TrinityCore/src/server/game/Globals;C:/github/TrinityCore/src/server/game/Grids/Cells;C:/github/TrinityCore/src/server/game/Grids/Notifiers;C:/github/TrinityCore/src/server/game/Grids;C:/github/TrinityCore/src/server/game/Groups;C:/github/TrinityCore/src/server/game/Guilds;C:/github/TrinityCore/src/server/game/Instances;C:/github/TrinityCore/src/server/game/Loot;C:/github/TrinityCore/src/server/game/Mails;C:/github/TrinityCore/src/server/game/Maps;C:/github/TrinityCore/src/server/game/Miscellaneous;C:/github/TrinityCore/src/server/game/Movement;C:/github/TrinityCore/src/server/game/Movement/MovementGenerators;C:/github/TrinityCore/src/server/game/Movement/Waypoints;C:/github/TrinityCore/src/server/game/OutdoorPvP;C:/github/TrinityCore/src/server/game/Pools;C:/github/TrinityCore/src/server/game/PrecompiledHeaders;C:/github/TrinityCore/src/server/game/Quests;C:/github/TrinityCore/src/server/game/Reputation;C:/github/TrinityCore/src/server/game/Scripting;C:/github/TrinityCore/src/server/game/Server/Protocol;C:/github/TrinityCore/src/server/game/Server/Protocol/Handlers;C:/github/TrinityCore/src/server/game/Server;C:/github/TrinityCore/src/server/game/Skills;C:/github/TrinityCore/src/server/game/Spells;C:/github/TrinityCore/src/server/game/Spells/Auras;C:/github/TrinityCore/src/server/game/Texts;C:/github/TrinityCore/src/server/game/Tools;C:/github/TrinityCore/src/server/game/Tickets;C:/github/TrinityCore/src/server/game/Weather;C:/github/TrinityCore/src/server/game/World;C:/github/TrinityCore/src/server/scripts/PrecompiledHeaders;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+if errorlevel 1 goto VCReportError</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\INSTALL_force.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cd .
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/github/TrinityCore/src/server/game/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\INSTALL_force;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd .
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/github/TrinityCore/src/server/game/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\INSTALL_force;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">cd .
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/github/TrinityCore/src/server/game/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\INSTALL_force;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">cd .
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/github/TrinityCore/src/server/game/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\INSTALL_force;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/game/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/github/TrinityCore/src/server/game/CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/game/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/github/TrinityCore/src/server/game/CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/game/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/github/TrinityCore/src/server/game/CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/game/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/github/TrinityCore/src/server/game/CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;C:\github\TrinityCore\src\server\game\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\github\TrinityCore\src\server\game\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/github/TrinityCore/ALL_BUILD.vcxproj">
+      <Project>FD637769-704D-4A25-9EC0-1BC0D69AEAB4</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

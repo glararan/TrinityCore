@@ -67,13 +67,13 @@ static size_t appendCommandTable(ChatCommand* target, const ChatCommand* source)
 
 ChatCommand* ChatHandler::getCommandTable()
 {
-    static ChatCommand repCommandTable[] =
+    static ChatCommand rpbodCommandTable[] =
     {
-        { "add",            SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepAddCommand>,  "", NULL },
-        { "delete",         SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepDelCommand>,  "", NULL },
-        { "info",           SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepInfoCommand,  "", NULL },
-        { "reset",          SEC_ADMINISTRATOR,  true,   OldHandler<&ChatHandler::HandleRepResetCommand, "", NULL },
-        { NULL,             0,                  false,  NULL,                                           "", NULL }
+        { "add",            SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepAddCommand>,   "", NULL },
+        { "delete",         SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepDelCommand>,   "", NULL },
+        { "info",           SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepInfoCommand>,  "", NULL },
+        { "reset",          SEC_ADMINISTRATOR,  true,   OldHandler<&ChatHandler::HandleRepResetCommand>, "", NULL },
+        { NULL,             0,                  false,  NULL,                                            "", NULL }
     };
 
     static ChatCommand banCommandTable[] =
@@ -340,7 +340,7 @@ ChatCommand* ChatHandler::getCommandTable()
 
     static ChatCommand commandTable[] =
     {
-        { "rep",            SEC_PLAYER,         true,  NULL,                                           "", repCommandTable      },
+        { "rpbod",          SEC_PLAYER,         true,  NULL,                                           "", rpbodCommandTable    },
 
         { "character",      SEC_GAMEMASTER,     true,  NULL,                                           "", characterCommandTable},
         { "list",           SEC_ADMINISTRATOR,  true,  NULL,                                           "", listCommandTable     },
@@ -356,6 +356,9 @@ ChatCommand* ChatHandler::getCommandTable()
 
         { "pet",            SEC_GAMEMASTER,     false, NULL,                                           "", petCommandTable },
         { "ticket",         SEC_MODERATOR,      false,  NULL,                                          "", ticketCommandTable },
+
+		// RP ANN
+		{ "rpann",			SEC_MODERATOR,		true,  OldHandler<&ChatHandler::HandleRPAnnCommand>,			   "", NULL },
 
         { "aura",           SEC_ADMINISTRATOR,  false, OldHandler<&ChatHandler::HandleAuraCommand>,                "", NULL },
         { "unaura",         SEC_ADMINISTRATOR,  false, OldHandler<&ChatHandler::HandleUnAuraCommand>,              "", NULL },

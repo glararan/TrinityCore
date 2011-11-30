@@ -16548,7 +16548,30 @@ bool Player::LoadFromDB(uint32 guid, SQLQueryHolder *holder)
     // set which actionbars the client has active - DO NOT REMOVE EVER AGAIN (can be changed though, if it does change fieldwise)
     SetByteValue(PLAYER_FIELD_BYTES, 2, fields[65].GetUInt8());
 
-    InitDisplayIds();
+	// MORPH
+	QueryResult result2 = CharacterDatabase.PQuery("SELECT morph FROM character_morph WHERE guid = %u", fields[0].GetUInt32());
+	if(result2)
+	{
+		Field* fields2 = result2->Fetch();
+		SetNativeDisplayId(fields2[0].GetUInt32());
+		SetDisplayId(fields2[0].GetUInt32());
+	}
+	else
+		InitDisplayIds();
+
+	// SCALE
+	QueryResult result3 = CharacterDatabase.PQuery("SELECT scale FROM character_scale WHERE guid = %u", fields[0].GetFloat());
+	if(result3)
+	{
+		Field* fields3 = result3->Fetch();
+		float Scale = fields3[0].GetFloat();
+		SetFloatValue(OBJECT_FIELD_SCALE_X, Scale);
+	}
+	else
+	{
+		CharacterDatabase.PExecute("INSERT INTO character_scale VALUES(%u, 1, Basic Scale)", GetGUID());
+		SetFloatValue(OBJECT_FIELD_SCALE_X, 1.0f);
+	}
 
     // cleanup inventory related item value fields (its will be filled correctly in _LoadInventory)
     for (uint8 slot = EQUIPMENT_SLOT_START; slot < EQUIPMENT_SLOT_END; ++slot)

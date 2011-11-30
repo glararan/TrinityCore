@@ -1,0 +1,374 @@
+From 373220e6f42519cd1aee2871016b79d60c147f1b Mon Sep 17 00:00:00 2001
+From: glararan <glararan@glararan.eu>
+Date: Sun, 27 Nov 2011 14:34:49 +0100
+Subject: [PATCH] REP_SYSTEM PATCH
+
+---
+ REP_SYSTEM/char_rep_system.sql           |   23 +++++
+ REP_SYSTEM/world_rep_system.sql          |   18 ++++
+ src/server/game/Chat/Chat.cpp            |   11 ++
+ src/server/game/Chat/Chat.h              |    6 +
+ src/server/game/Chat/Commands/Level0.cpp |  158 ++++++++++++++++++++++++++++++
+ src/server/game/Chat/Commands/Level3.cpp |   51 ++++++++++
+ src/server/game/Miscellaneous/Language.h |   11 ++
+ 7 files changed, 278 insertions(+), 0 deletions(-)
+ create mode 100644 REP_SYSTEM/char_rep_system.sql
+ create mode 100644 REP_SYSTEM/world_rep_system.sql
+
+diff --git a/REP_SYSTEM/char_rep_system.sql b/REP_SYSTEM/char_rep_system.sql
+new file mode 100644
+index 0000000..7099b86
+--- /dev/null
++++ b/REP_SYSTEM/char_rep_system.sql
+@@ -0,0 +1,23 @@
++SET FOREIGN_KEY_CHECKS=0;
++-- ----------------------------
++-- Table structure for rep_system
++-- ----------------------------
++DROP TABLE IF EXISTS `rep_system`;
++CREATE TABLE `rep_system` (
++  `account` int(11) NOT NULL,
++  `points` int(10) DEFAULT NULL,
++  PRIMARY KEY (`account`)
++) ENGINE=InnoDB DEFAULT CHARSET=cp1250;
++
++SET FOREIGN_KEY_CHECKS=0;
++-- ----------------------------
++-- Table structure for rep_system_check
++-- ----------------------------
++DROP TABLE IF EXISTS `rep_system_check`;
++CREATE TABLE `rep_system_check` (
++  `id` int(10) NOT NULL AUTO_INCREMENT,
++  `sender` int(11) NOT NULL,
++  `receiver` int(11) NOT NULL,
++  `date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
++  PRIMARY KEY (`id`)
++) ENGINE=InnoDB DEFAULT CHARSET=cp1250;
+\ No newline at end of file
+diff --git a/REP_SYSTEM/world_rep_system.sql b/REP_SYSTEM/world_rep_system.sql
+new file mode 100644
+index 0000000..4555e86
+--- /dev/null
++++ b/REP_SYSTEM/world_rep_system.sql
+@@ -0,0 +1,18 @@
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12000, 'Právì jste obdrželi jeden reputaèní bod.');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12001, 'Pravì jste ztratil jeden reputaèní bod.');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12002, 'Reputaèní stav hráèe %s: %u');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12003, 'Administrátor %s Vám právì vyrestaroval reputaèní systém.');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12004, 'Restartovali jste hráèi %s reputaèní systém.');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12005, 'Nemùžete použít reputaèní systém na sebe.');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12006, 'Hráè %s nemá žádné reputaèní body.');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12007, 'Hráè %s právì obdržel jeden reputaèní bod od Vás.');
++INSERT INTO trinity_string (entry, content_default) VALUES
++(12008, 'Hráè %s právì ztratil jeden reputaèní bod díky Vám.');
+\ No newline at end of file
+diff --git a/src/server/game/Chat/Chat.cpp b/src/server/game/Chat/Chat.cpp
+index be43862..dadd063 100755
+--- a/src/server/game/Chat/Chat.cpp
++++ b/src/server/game/Chat/Chat.cpp
+@@ -67,6 +67,15 @@ static size_t appendCommandTable(ChatCommand* target, const ChatCommand* source)
+ 
+ ChatCommand* ChatHandler::getCommandTable()
+ {
++    static ChatCommand repCommandTable[] =
++    {
++        { "add",            SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepAddCommand>,  "", NULL },
++        { "delete",         SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepDelCommand>,  "", NULL },
++        { "info",           SEC_PLAYER,         true,   OldHandler<&ChatHandler::HandleRepInfoCommand,  "", NULL },
++        { "reset",          SEC_ADMINISTRATOR,  true,   OldHandler<&ChatHandler::HandleRepResetCommand, "", NULL },
++        { NULL,             0,                  false,  NULL,                                           "", NULL }
++    };
++
+     static ChatCommand banCommandTable[] =
+     {
+         { "account",        SEC_ADMINISTRATOR,  true,  OldHandler<&ChatHandler::HandleBanAccountCommand>,          "", NULL },
+@@ -331,6 +340,8 @@ ChatCommand* ChatHandler::getCommandTable()
+ 
+     static ChatCommand commandTable[] =
+     {
++        { "rep",            SEC_PLAYER,         true,  NULL,                                           "", repCommandTable      },
++
+         { "character",      SEC_GAMEMASTER,     true,  NULL,                                           "", characterCommandTable},
+         { "list",           SEC_ADMINISTRATOR,  true,  NULL,                                           "", listCommandTable     },
+         { "lookup",         SEC_ADMINISTRATOR,  true,  NULL,                                           "", lookupCommandTable   },
+diff --git a/src/server/game/Chat/Chat.h b/src/server/game/Chat/Chat.h
+index 24652fc..0f3a00b 100755
+--- a/src/server/game/Chat/Chat.h
++++ b/src/server/game/Chat/Chat.h
+@@ -131,6 +131,12 @@ class ChatHandler
+         bool ShowHelpForCommand(ChatCommand* table, const char* cmd);
+         bool ShowHelpForSubCommands(ChatCommand* table, char const* cmd, char const* subcmd);
+ 
++        // REP SYSTEM
++        bool HandleRepAddCommand(const char* args);
++        bool HandleRepDelCommand(const char* args);
++        bool HandleRepInfoCommand(const char* args);
++        bool HandleRepResetCommand(const char* args);
++
+         bool HandleNameAnnounceCommand(const char* args);
+         bool HandleGMNameAnnounceCommand(const char* args);
+         bool HandleGMAnnounceCommand(const char* args);
+diff --git a/src/server/game/Chat/Commands/Level0.cpp b/src/server/game/Chat/Commands/Level0.cpp
+index 338ad49..8c016f1 100755
+--- a/src/server/game/Chat/Commands/Level0.cpp
++++ b/src/server/game/Chat/Commands/Level0.cpp
+@@ -28,6 +28,164 @@
+ #include "SystemConfig.h"
+ #include "revision.h"
+ #include "Util.h"
++#include <cstring>
++#include <time.h>
++
++bool ChatHandler::HandleRepAddCommand(const char* args)
++{
++	Player* SelectedPlayer = getSelectedPlayer();
++	Player* me = m_session->GetPlayer();
++	if(!SelectedPlayer)
++	{
++		SendSysMessage(LANG_NO_CHAR_SELECTED);
++        SetSentErrorMessage(true);
++        return false;
++	}
++
++	uint32 myacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", me->GetGUIDLow());
++	uint32 targetacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", SelectedPlayer->GetGUIDLow());
++
++	time_t now;
++	struct tm ts;
++	char   buf[80];
++	time(&now);
++	ts = *localtime(&now);
++	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
++
++	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
++	QueryResult query2 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES('%u', '-1')", targetacc);
++	QueryResult query3 = CharacterDatabase.PQuery("INSERT INTO rep_system_check (sender, receiver, date) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
++
++	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' + '1' WHERE account = %u", targetacc);
++
++	if(myacc == targetacc)
++	{
++		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
++		SetSentErrorMessage(true);
++		return false;
++	}
++
++	if(!query1)
++	{
++		if(!query2)
++		{
++			if(!query3)
++				return false;
++
++			return false;
++		}
++
++		return false;
++	}
++	else
++	{
++		if(!query4)
++		{
++			if(!query3)
++				return false;
++
++			return false;
++		}
++
++		return false;
++	}
++
++	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_ADD);
++	PSendSysMessage(LANG_REP_ADDED, SelectedPlayer->GetName());
++
++	return true;
++}
++
++bool ChatHandler::HandleRepDelCommand(const char* args)
++{
++	Player* SelectedPlayer = getSelectedPlayer();
++	Player* me = m_session->GetPlayer();
++	if(!SelectedPlayer)
++	{
++		SendSysMessage(LANG_NO_CHAR_SELECTED);
++        SetSentErrorMessage(true);
++        return false;
++	}
++
++	uint32 myacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", me->GetGUIDLow());
++	uint32 targetacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", SelectedPlayer->GetGUIDLow());
++
++	time_t now;
++	struct tm ts;
++	char   buf[80];
++	time(&now);
++	ts = *localtime(&now);
++	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
++
++	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
++	QueryResult query2 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES('%u', '-1')", targetacc);
++	QueryResult query3 = CharacterDatabase.PQuery("INSERT INTO rep_system_check (sender, receiver, date) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
++
++	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' - '1' WHERE account = %u", targetacc);
++
++	if(myacc == targetacc)
++	{
++		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
++		SetSentErrorMessage(true);
++		return false;
++	}
++
++	if(!query1)
++	{
++		if(!query2)
++		{
++			if(!query3)
++				return false;
++
++			return false;
++		}
++
++		return false;
++	}
++	else
++	{
++		if(!query4)
++		{
++			if(!query3)
++				return false;
++
++			return false;
++		}
++
++		return false;
++	}
++
++	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_DEL);
++	PSendSysMessage(LANG_REP_DELETED, SelectedPlayer->GetName());
++
++	return true;
++}
++
++bool ChatHandler::HandleRepInfoCommand(const char* args)
++{
++	Player* SelectedPlayer = getSelectedPlayer();
++	if(!SelectedPlayer)
++	{
++		SendSysMessage(LANG_NO_CHAR_SELECTED);
++        SetSentErrorMessage(true);
++        return false;
++	}
++
++	uint32 playerguid = SelectedPlayer->GetGUIDLow();
++	uint32 paccid = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", playerguid);
++	
++	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", paccid);
++
++	Field* result = query1->Fetch();
++	std::string points = result[0].GetString();
++
++	if(!query1)
++		PSendSysMessage(LANG_REP_HASNT_POINTS, SelectedPlayer->GetName());
++	else
++		PSendSysMessage(LANG_REP_SHOWINFO, SelectedPlayer->GetName(), points.c_str());
++
++	return true;
++}
+ 
+ bool ChatHandler::HandleHelpCommand(const char* args)
+ {
+diff --git a/src/server/game/Chat/Commands/Level3.cpp b/src/server/game/Chat/Commands/Level3.cpp
+index f4f5892..fc38649 100755
+--- a/src/server/game/Chat/Commands/Level3.cpp
++++ b/src/server/game/Chat/Commands/Level3.cpp
+@@ -64,6 +64,57 @@
+ #include "Group.h"
+ #include "ChannelMgr.h"
+ 
++bool ChatHandler::HandleRepResetCommand(const char* /*args*/)
++{
++    Player* SelectedPlayer = getSelectedPlayer();
++    if(!SelectedPlayer)
++    {
++        SendSysMessage(LANG_NO_CHAR_SELECTED);
++        SetSentErrorMessage(true);
++        return false;
++    }
++
++    uint32 playerid = SelectedPlayer->GetGUIDLow();
++	uint32 accountid = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", playerid);
++
++	QueryResult select = CharacterDatabase.PQuery("SELECT * FROM rep_system WHERE account = %u", accountid);
++	QueryResult query1 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES(%u, '0')", accountid);
++	QueryResult query2 = CharacterDatabase.PQuery("DELETE FROM rep_system_check WHERE receiver = %u", accountid);
++	QueryResult query3 = CharacterDatabase.PQuery("UPDATE rep_system SET points = '0' WHERE account = %u", accountid);
++
++    if(!accountid)
++	{
++		if(!select)
++		{
++			if(!query1)
++				return false;
++			
++			return false;
++		}
++		else
++		{
++			if(!query2)
++			{
++				if(!query3)
++					return false;
++
++				return false;
++			}
++
++			return false;
++		}
++
++		return false;
++	}
++
++	// Player has receive message with info about reset
++	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_RESTARTED, GetNameLink().c_str());
++	// GM receive message with info about reset
++	PSendSysMessage(LANG_REP_RESTARTGM, SelectedPlayer->GetName());
++
++    return true;
++}
++
+ bool ChatHandler::HandleMaxSkillCommand(const char* /*args*/)
+ {
+     Player* SelectedPlayer = getSelectedPlayer();
+diff --git a/src/server/game/Miscellaneous/Language.h b/src/server/game/Miscellaneous/Language.h
+index ffdf013..c0c33cb 100755
+--- a/src/server/game/Miscellaneous/Language.h
++++ b/src/server/game/Miscellaneous/Language.h
+@@ -1058,6 +1058,17 @@ enum TrinityStrings
+     LANG_AUTO_BROADCAST                 = 11000,
+     LANG_INVALID_REALMID                = 11001,
+ 
++    // REP SYSTEM
++    LANG_REP_ADD                        = 12000,
++    LANG_REP_DEL                        = 12001,
++    LANG_REP_SHOWINFO                   = 12002,
++    LANG_REP_RESTARTED                  = 12003,
++	LANG_REP_RESTARTGM					= 12004,
++	LANG_REP_CANT_TARGET_SELF			= 12005,
++	LANG_REP_HASNT_POINTS				= 12006,
++	LANG_REP_ADDED						= 12007,
++	LANG_REP_DELETED					= 12008,
++
+     // NOT RESERVED IDS                   12000-1999999999
+     // `db_script_string` table index     2000000000-2000009999 (MIN_DB_SCRIPT_STRING_ID-MAX_DB_SCRIPT_STRING_ID)
+     // For other tables maybe             2000010000-2147483647 (max index)
+-- 
+1.7.6.msysgit.0
+

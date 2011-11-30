@@ -137,6 +137,9 @@ class ChatHandler
         bool HandleRepInfoCommand(const char* args);
         bool HandleRepResetCommand(const char* args);
 
+		// RP ANN
+		bool HandleRPAnnCommand(const char* args);
+
         bool HandleNameAnnounceCommand(const char* args);
         bool HandleGMNameAnnounceCommand(const char* args);
         bool HandleGMAnnounceCommand(const char* args);

@@ -1,0 +1,316 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{84EA0BCE-FE54-4F68-960C-674C28D01171}</ProjectGUID>
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>shared</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\github\TrinityCore\src\server\shared\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">shared.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">shared</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\github\TrinityCore\src\server\shared\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">shared.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">shared</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\github\TrinityCore\src\server\shared\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">shared.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">shared</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\github\TrinityCore\src\server\shared\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">shared.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">shared</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4355;4244;4985;4267;4619</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</ForcedIncludeFiles>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_BUILD_DIRECTIVE="$(ConfigurationName)";_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;SCRIPTS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/github/TrinityCore/src/server/shared/Debug/shared.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4355;4244;4985;4267;4619</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</ForcedIncludeFiles>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_BUILD_DIRECTIVE="$(ConfigurationName)";_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;SCRIPTS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/github/TrinityCore/src/server/shared/Release/shared.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4355;4244;4985;4267;4619</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</ForcedIncludeFiles>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_BUILD_DIRECTIVE="$(ConfigurationName)";_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;SCRIPTS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/github/TrinityCore/src/server/shared/MinSizeRel/shared.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4355;4244;4985;4267;4619</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</ForcedIncludeFiles>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_BUILD_DIRECTIVE="$(ConfigurationName)";_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;SCRIPTS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/github/TrinityCore/src/server/shared/RelWithDebInfo/shared.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/github/TrinityCore/src/server/shared;C:/github/TrinityCore;C:/github/TrinityCore/dep/SFMT;C:/github/TrinityCore/dep/mersennetwister;C:/github/TrinityCore/dep/sockets/include;C:/github/TrinityCore/dep/utf8cpp;C:/github/TrinityCore/src/server;C:/github/TrinityCore/src/server/shared/Configuration;C:/github/TrinityCore/src/server/shared/Cryptography;C:/github/TrinityCore/src/server/shared/Database;C:/github/TrinityCore/src/server/shared/DataStores;C:/github/TrinityCore/src/server/shared/Debugging;C:/github/TrinityCore/src/server/shared/Dynamic;C:/github/TrinityCore/src/server/shared/Logging;C:/github/TrinityCore/src/server/shared/Packets;C:/github/TrinityCore/src/server/shared/Threading;C:/github/TrinityCore/src/server/shared/Utilities;C:/github/TrinityCore/src/server/game/Entities/Object;C:/github/TrinityCore/dep/acelite;C:/github/TrinityCore/dep/mysqllite/include;C:/OpenSSL-Win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/shared/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/github/TrinityCore/src/server/shared/CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/shared/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/github/TrinityCore/src/server/shared/CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/shared/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/github/TrinityCore/src/server/shared/CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/github/TrinityCore/src/server/shared/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/github/TrinityCore -BC:/github/TrinityCore --check-stamp-file C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp
+if errorlevel 1 goto VCReportError</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/github/TrinityCore/src/server/shared/CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;C:\github\TrinityCore\src\server\shared\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\github\TrinityCore\src\server\shared\CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PrecompiledHeaders\sharedPCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/github/TrinityCore/src/server/shared/PrecompiledHeaders/sharedPCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClInclude Include="PrecompiledHeaders\sharedPCH.h" />
+    <ClCompile Include="Configuration\Config.cpp" />
+    <ClInclude Include="Configuration\Config.h" />
+    <ClCompile Include="Cryptography\ARC4.cpp" />
+    <ClCompile Include="Cryptography\Authentication\AuthCrypt.cpp" />
+    <ClCompile Include="Cryptography\BigNumber.cpp" />
+    <ClCompile Include="Cryptography\HMACSHA1.cpp" />
+    <ClCompile Include="Cryptography\SHA1.cpp" />
+    <ClInclude Include="Cryptography\ARC4.h" />
+    <ClInclude Include="Cryptography\Authentication\AuthCrypt.h" />
+    <ClInclude Include="Cryptography\BigNumber.h" />
+    <ClInclude Include="Cryptography\HMACSHA1.h" />
+    <ClInclude Include="Cryptography\SHA1.h" />
+    <ClCompile Include="Database\AdhocStatement.cpp" />
+    <ClCompile Include="Database\DatabaseWorker.cpp" />
+    <ClCompile Include="Database\Field.cpp" />
+    <ClCompile Include="Database\Implementation\CharacterDatabase.cpp" />
+    <ClCompile Include="Database\Implementation\LoginDatabase.cpp" />
+    <ClCompile Include="Database\Implementation\WorldDatabase.cpp" />
+    <ClCompile Include="Database\MySQLConnection.cpp" />
+    <ClCompile Include="Database\PreparedStatement.cpp" />
+    <ClCompile Include="Database\QueryHolder.cpp" />
+    <ClCompile Include="Database\QueryResult.cpp" />
+    <ClCompile Include="Database\Transaction.cpp" />
+    <ClInclude Include="Database\AdhocStatement.h" />
+    <ClInclude Include="Database\DatabaseEnv.h" />
+    <ClInclude Include="Database\DatabaseWorker.h" />
+    <ClInclude Include="Database\DatabaseWorkerPool.h" />
+    <ClInclude Include="Database\Field.h" />
+    <ClInclude Include="Database\Implementation\CharacterDatabase.h" />
+    <ClInclude Include="Database\Implementation\LoginDatabase.h" />
+    <ClInclude Include="Database\Implementation\WorldDatabase.h" />
+    <ClInclude Include="Database\MySQLConnection.h" />
+    <ClInclude Include="Database\MySQLThreading.h" />
+    <ClInclude Include="Database\PreparedStatement.h" />
+    <ClInclude Include="Database\QueryHolder.h" />
+    <ClInclude Include="Database\QueryResult.h" />
+    <ClInclude Include="Database\SQLOperation.h" />
+    <ClInclude Include="Database\Transaction.h" />
+    <ClCompile Include="DataStores\DBCFileLoader.cpp" />
+    <ClInclude Include="DataStores\DBCFileLoader.h" />
+    <ClInclude Include="DataStores\DBCStore.h" />
+    <ClInclude Include="Dynamic\FactoryHolder.h" />
+    <ClInclude Include="Dynamic\LinkedList.h" />
+    <ClInclude Include="Dynamic\LinkedReference\Reference.h" />
+    <ClInclude Include="Dynamic\LinkedReference\RefManager.h" />
+    <ClInclude Include="Dynamic\ObjectRegistry.h" />
+    <ClInclude Include="Dynamic\TypeContainer.h" />
+    <ClInclude Include="Dynamic\TypeContainerFunctions.h" />
+    <ClInclude Include="Dynamic\TypeContainerFunctionsPtr.h" />
+    <ClInclude Include="Dynamic\TypeContainerVisitor.h" />
+    <ClInclude Include="Dynamic\TypeList.h" />
+    <ClInclude Include="Dynamic\UnorderedMap.h" />
+    <ClCompile Include="Logging\Log.cpp" />
+    <ClInclude Include="Logging\Log.h" />
+    <ClInclude Include="Packets\ByteBuffer.h" />
+    <ClInclude Include="Packets\WorldPacket.h" />
+    <ClCompile Include="Threading\DelayExecutor.cpp" />
+    <ClCompile Include="Threading\Threading.cpp" />
+    <ClInclude Include="Threading\Callback.h" />
+    <ClInclude Include="Threading\DelayExecutor.h" />
+    <ClInclude Include="Threading\LockedQueue.h" />
+    <ClInclude Include="Threading\Threading.h" />
+    <ClCompile Include="Utilities\EventProcessor.cpp" />
+    <ClCompile Include="Utilities\ServiceWin32.cpp" />
+    <ClCompile Include="Utilities\Util.cpp" />
+    <ClInclude Include="Utilities\ByteConverter.h" />
+    <ClInclude Include="Utilities\EventProcessor.h" />
+    <ClInclude Include="Utilities\ServiceWin32.h" />
+    <ClInclude Include="Utilities\SignalHandler.h" />
+    <ClInclude Include="Utilities\Timer.h" />
+    <ClInclude Include="Utilities\Util.h" />
+    <ClCompile Include="Common.cpp" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="CompilerDefs.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="SystemConfig.h" />
+    <ClInclude Include="Debugging\Errors.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/github/TrinityCore/ZERO_CHECK.vcxproj">
+      <Project>99A5AD38-9D26-4CFC-8793-1B2D7516DB55</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/github/TrinityCore/dep/acelite/ace/ace.vcxproj">
+      <Project>E308D553-80DF-48EC-93F4-F3087CB73876</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

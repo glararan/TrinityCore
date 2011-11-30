@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\AABox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Any.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BinaryFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BinaryInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BinaryOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Capsule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CollisionDetection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CoordinateFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Crypto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Cylinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\debugAssert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FileSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\fileutils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\g3dfnmatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\g3dmath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LineSegment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Matrix3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Matrix4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MemoryManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PhysicsFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\prompt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Quat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ReferenceCount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\RegistryUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\stringutils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\System.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\TextInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\TextOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\uint128.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UprightFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Vector2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Vector3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Vector4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BBA3DF8-A87E-414E-9AB0-2FFCB0E04EA0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\AABox.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Any.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\BinaryFormat.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\BinaryInput.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\BinaryOutput.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Box.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Capsule.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\CollisionDetection.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\CoordinateFrame.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Crypto.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Cylinder.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\debugAssert.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\FileSystem.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\fileutils.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\format.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\g3dfnmatch.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\g3dmath.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Line.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\LineSegment.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Log.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Matrix3.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Matrix4.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\MemoryManager.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\PhysicsFrame.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Plane.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\prompt.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Quat.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Random.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Ray.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\ReferenceCount.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\RegistryUtil.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Sphere.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\stringutils.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\System.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\TextInput.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\TextOutput.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\uint128.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\UprightFrame.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Vector2.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Vector3.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="source\Vector4.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

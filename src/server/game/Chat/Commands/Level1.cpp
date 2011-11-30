@@ -40,6 +40,21 @@
 #include "VMapFactory.h"
 #endif
 
+// RP ANN
+bool ChatHandler::HandleRPAnnCommand(const char* args)
+{
+	WorldPacket data;
+	if(!*args)
+		return false;
+
+	std::string name("Console");
+	if(WorldSession* session = GetSession())
+		name = session->GetPlayer()->GetName();
+
+	sWorld->SendGMText(LANG_RP_ANN, name.c_str(), args);
+	return true;
+}
+
 bool ChatHandler::HandleNameAnnounceCommand(const char* args)
 {
     WorldPacket data;
