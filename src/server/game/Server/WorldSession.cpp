@@ -1070,3 +1070,59 @@ void WorldSession::ProcessQueryCallbacks()
         _stableSwapCallback.FreeResult();
     }
 }
+
+// Cache System
+void WorldSession::ReCacheItemInfo(uint32 entry)
+{
+	WorldPacket data(CMSG_ITEM_QUERY_SINGLE, 4);
+	data << uint32(entry);
+	HandleItemQuerySingleOpcode(data);
+	data.Initialize(CMSG_ITEM_QUERY_SINGLE, 12);
+	data << uint32(entry) << uint64(0);
+	HandleItemNameQueryOpcode(data);
+}
+
+void WorldSession::ReCachePlayerName(uint64 guid)
+{
+	WorldPacket data(CMSG_NAME_QUERY, 8);
+	data << guid;
+	HandleNameQueryOpcode(data);
+}
+
+void WorldSession::ReCacheCreatureInfo(uint32 entry)
+{
+	WorldPacket data(CMSG_CREATURE_QUERY, 12);
+	data << entry;
+	data << (uint64)1;
+	HandleCreatureQueryOpcode(data);
+}
+
+void WorldSession::ReCacheGameObjectInfo(uint32 entry)
+{
+	WorldPacket data(CMSG_GAMEOBJECT_QUERY, 12);
+	data << entry;
+	data << (uint64)1;
+	HandleGameObjectQueryOpcode(data);
+}
+
+void WorldSession::CustomMessage(const char* format, ...)
+{
+	char buffer[1024];
+
+	va_list ap;
+	va_start(ap, format);
+	vsnprintf(buffer, 1024, format, ap);
+	va_end(ap);
+
+	uint32 messageLenght = (uint32)strlen(buffer) + 1;
+	WorldPacket data(SMSG_MESSAGECHAT, 30 + messageLenght);
+	data << (uint8)CHAT_MSG_SYSTEM;
+	data << (uint32)LANG_UNIVERSAL;
+	data << (uint64)0;
+	data << (uint64)0;
+	data << (uint64)0;
+	data << messageLenght;
+	data << buffer;
+	data << uint8(0);
+	SendPacket(&data);
+}

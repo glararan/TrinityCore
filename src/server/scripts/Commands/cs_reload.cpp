@@ -57,6 +57,7 @@ public:
             { "quest",      SEC_ADMINISTRATOR,  true,  &HandleReloadAllQuestCommand,      "", NULL },
             { "scripts",    SEC_ADMINISTRATOR,  true,  &HandleReloadAllScriptsCommand,    "", NULL },
             { "spell",      SEC_ADMINISTRATOR,  true,  &HandleReloadAllSpellCommand,      "", NULL },
+			{ "gameobject", SEC_ADMINISTRATOR,	true,  &HandleReloadAllGameObjectCommand, "", NULL },
             { "",           SEC_ADMINISTRATOR,  true,  &HandleReloadAllCommand,           "", NULL },
             { NULL,         0,                  false, NULL,                              "", NULL }
         };
@@ -95,9 +96,11 @@ public:
             { "gameobject_loot_template",     SEC_ADMINISTRATOR, true,  &HandleReloadLootTemplatesGameobjectCommand,    "", NULL },
             { "gameobject_questrelation",     SEC_ADMINISTRATOR, true,  &HandleReloadGOQuestRelationsCommand,           "", NULL },
             { "gameobject_scripts",           SEC_ADMINISTRATOR, true,  &HandleReloadGameObjectScriptsCommand,          "", NULL },
+			{ "gameobject_template",		  SEC_ADMINISTRATOR, true,  &HandleReloadGameObjectTemplateCommand,			"", NULL },
             { "gm_tickets",                   SEC_ADMINISTRATOR, true,  &HandleReloadGMTicketsCommand,                  "", NULL },
             { "gossip_menu",                  SEC_ADMINISTRATOR, true,  &HandleReloadGossipMenuCommand,                 "", NULL },
             { "gossip_menu_option",           SEC_ADMINISTRATOR, true,  &HandleReloadGossipMenuOptionCommand,           "", NULL },
+			{ "item_template",				  SEC_ADMINISTRATOR, true,  &HandleReloadItemTemplateCommand,				"", NULL },
             { "item_enchantment_template",    SEC_ADMINISTRATOR, true,  &HandleReloadItemEnchantementsCommand,          "", NULL },
             { "item_loot_template",           SEC_ADMINISTRATOR, true,  &HandleReloadLootTemplatesItemCommand,          "", NULL },
             { "item_set_names",               SEC_ADMINISTRATOR, true,  &HandleReloadItemSetNamesCommand,               "", NULL },
@@ -307,6 +310,7 @@ public:
     {
         HandleReloadPageTextsCommand(handler, "a");
         HandleReloadItemEnchantementsCommand(handler, "a");
+		HandleReloadItemTemplateCommand(handler, "a");
         return true;
     }
 
@@ -553,6 +557,14 @@ public:
         sConditionMgr->LoadConditions(true);
         return true;
     }
+
+	static bool HandleReloadItemTemplateCommand(ChatHandler* handler, const char* /*args*/)
+	{
+		sLog->outString("Re-Loading item_template...");
+		sObjectMgr->LoadItemTemplates();
+		handler->SendGlobalGMSysMessage("DB table 'item_template' reloaded.");
+		return true;
+	}
 
     static bool HandleReloadGOQuestRelationsCommand(ChatHandler* handler, const char* /*args*/)
     {
@@ -1255,6 +1267,24 @@ public:
         sObjectMgr->LoadVehicleTemplateAccessories();
         handler->SendGlobalGMSysMessage("Vehicle template accessories reloaded.");
         return true;
+    }
+
+    static bool HandleReloadGameObjectTemplateCommand(ChatHandler* handler, const char* /*args*/)
+    {
+        sLog->outString("Reloading gameobject_template table...");
+        sObjectMgr->LoadGameObjectTemplate();
+        handler->SendGlobalGMSysMessage("DB table `gameobject_template` reloaded.");
+        return true;
+    }
+    
+    static bool HandleReloadAllGameObjectCommand(ChatHandler* handler, const char* /*args*/)
+    {
+        HandleReloadGameTeleCommand(handler, "a");
+        HandleReloadLootTemplatesGameobjectCommand(handler, "a");
+        HandleReloadGOQuestRelationsCommand(handler, "a");
+        HandleReloadGameObjectScriptsCommand(handler, "a");
+        HandleReloadGameObjectTemplateCommand(handler, "a");
+		return true;
     }
 };
 

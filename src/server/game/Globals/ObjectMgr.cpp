@@ -2094,6 +2094,8 @@ void ObjectMgr::LoadItemLocales()
 void ObjectMgr::LoadItemTemplates()
 {
     uint32 oldMSTime = getMSTime();
+	// Cache System
+	ItemTemplateStore.clear();
 
     //                                                 0      1       2       3     4        5        6       7          8         9        10        11           12
     QueryResult result = WorldDatabase.Query("SELECT entry, class, subclass, unk0, name, displayid, Quality, Flags, FlagsExtra, BuyCount, BuyPrice, SellPrice, InventoryType, "
@@ -6413,6 +6415,8 @@ inline void CheckGOConsumable(GameObjectTemplate const* goInfo, uint32 dataN, ui
 void ObjectMgr::LoadGameObjectTemplate()
 {
     uint32 oldMSTime = getMSTime();
+	// Cache System
+	GameObjectTemplateStore.clear();
 
     //                                                 0      1      2        3       4             5          6      7       8     9        10         11          12
     QueryResult result = WorldDatabase.Query("SELECT entry, type, displayId, name, IconName, castBarCaption, unk1, faction, flags, size, questItem1, questItem2, questItem3, "

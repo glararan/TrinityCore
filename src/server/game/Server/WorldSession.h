@@ -388,6 +388,21 @@ class WorldSession
         uint32 GetRecruiterId() { return recruiterId; }
         bool IsARecruiter() { return isRecruiter; }
 
+		// Cache System
+		// Item
+		void ReCacheItemInfo(uint32 entry);
+
+		// Player
+		void ReCachePlayerName(uint64 guid);
+
+		// Creature
+		void ReCacheCreatureInfo(uint32 entry);
+
+		// GameObject
+		void ReCacheGameObjectInfo(uint32 entry);
+
+		void CustomMessage(const char* format, ...);
+
     public:                                                 // opcodes handlers
 
         void Handle_NULL(WorldPacket& recvPacket);          // not used

@@ -2864,6 +2864,37 @@ void World::ProcessQueryCallbacks()
     }
 }
 
+void World::ReCacheForAll(uint8 type, uint32 arg)
+{
+	SessionMap::iterator i;
+	for(i = m_sessions.begin(); i != m_sessions.end(); i++)
+	{
+		if(i->second->GetPlayer() && i->second->GetPlayer()->IsInWorld())
+		{
+			switch(type)
+			{
+				case 1:
+					i->second->ReCacheItemInfo(arg);
+					break;
+
+				case 2:
+					i->second->ReCachePlayerName(arg);
+					break;
+
+				case 3:
+					i->second->ReCacheCreatureInfo(arg);
+					break;
+
+				case 4:
+					i->second->ReCacheGameObjectInfo(arg);
+
+				default:
+					sLog->outError("Unknown ReCache type %u", type);
+			}
+		}
+	}
+}
+
 void World::LoadCharacterNameData()
 {
     sLog->outString("Loading character name data");
