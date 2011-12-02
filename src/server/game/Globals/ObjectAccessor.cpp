@@ -182,6 +182,36 @@ void ObjectAccessor::SaveAllPlayers()
         itr->second->SaveToDB();
 }
 
+void ObjectAccessor::PlayerLevelForTime()
+{
+	uint8 confMaxLevel = sWorld->getIntConfig(CONFIG_MAX_PLAYER_LEVEL);
+	uint8 confIntervalForLevel = sWorld->getIntConfig(CONFIG_RP_LEVELING_INTERVAL_FOR_LEVEL);
+	bool  confMsgEnabled = sWorld->getBoolConfig(CONFIG_RP_LEVELING_MSG);
+
+	TRINITY_READ_GUARD(HashMapHolder<Player>::LockType, *HashMapHolder<Player>::GetLock());
+	HashMapHolder<Player>::MapType& m = HashMapHolder<Player>::GetContainer();
+	for(HashMapHolder<Player>::MapType::iterator i = m.begin(); i != m.end(); ++i)
+	{
+		if(i->second->IsInWorld() && i->second->GetLevelPlayedTime() >= confIntervalForLevel)
+		{
+			if(!i->second->isAFK() && i->second->isAlive() && i->second->getLevel() > confMaxLevel)
+			{
+				uint8 level = i->second->getLevel() + 1;
+
+				i->second->GiveLevel(level);
+				i->second->SetUInt32Value(PLAYER_XP, 0);
+				i->second->SaveToDB(true);
+
+				if(i->second->getLevel() >= 20)
+					i->second->InitTalentForLevel();
+
+				if(confMsgEnabled)
+					sWorld->SendWorldText(LANG_RP_LEVELING, i->second->GetName(), i->second->getLevel());
+			}
+		}
+	}
+}
+
 Corpse* ObjectAccessor::GetCorpseForPlayerGUID(uint64 guid)
 {
     TRINITY_READ_GUARD(ACE_RW_Thread_Mutex, i_corpseLock);

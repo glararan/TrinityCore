@@ -2785,3 +2785,16 @@ PlayerDump.DisallowOverwrite = 1
 
 #
 ###################################################################################################
+# RP LEVELING
+#	default: RP_LEVELING.On = 1
+#			 RP_LEVELING.CheckInterval = 60
+#			 RP_LEVELING.IntervalForLevel = 3600
+#			 RP_LEVELING_MSG.On = 1
+#
+# © 2011 Wolf Officious - Old Version of Code
+# © 2011 gLararaN.eu - New Version of Code
+###################################################################################################
+RP_LEVELING.On = 1
+RP_LEVELING.CheckInterval = 60
+RP_LEVELING.IntervalForLevel = 3600
+RP_LEVELING_MSG.On = 1

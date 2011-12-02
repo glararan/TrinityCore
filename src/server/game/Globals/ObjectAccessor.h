@@ -223,6 +223,7 @@ class ObjectAccessor
         }
 
         static void SaveAllPlayers();
+		void PlayerLevelForTime();
 
         //non-static functions
         void AddUpdateObject(Object* obj)

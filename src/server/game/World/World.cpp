@@ -1182,6 +1182,12 @@ void World::LoadConfigSettings(bool reload)
     m_int_configs[CONFIG_AUTOBROADCAST_CENTER] = ConfigMgr::GetIntDefault("AutoBroadcast.Center", 0);
     m_int_configs[CONFIG_AUTOBROADCAST_INTERVAL] = ConfigMgr::GetIntDefault("AutoBroadcast.Timer", 60000);
 
+	// RP LEVELING
+	m_bool_configs[CONFIG_RP_LEVELING] = ConfigMgr::GetBoolDefault("RP_LEVELING.On", false);
+	m_bool_configs[CONFIG_RP_LEVELING_MSG] = ConfigMgr::GetBoolDefault("RP_LEVELING_MSG.On", false);
+	m_int_configs[CONFIG_RP_LEVELING_CHECK_INTERVAL] = ConfigMgr::GetIntDefault("RP_LEVELING.CheckInterval", 60);
+	m_int_configs[CONFIG_RP_LEVELING_INTERVAL_FOR_LEVEL] = ConfigMgr::GetIntDefault("RP_LEVELING.IntervalForLevel", 3600);
+
     // MySQL ping time interval
     m_int_configs[CONFIG_DB_PING_INTERVAL] = ConfigMgr::GetIntDefault("MaxPingTime", 30);
 
@@ -1663,6 +1669,9 @@ void World::SetInitialWorldSettings()
     m_timers[WUPDATE_AUTOBROADCAST].SetInterval(getIntConfig(CONFIG_AUTOBROADCAST_INTERVAL));
     m_timers[WUPDATE_DELETECHARS].SetInterval(DAY*IN_MILLISECONDS); // check for chars to delete every day
 
+	// RP LEVELING
+	m_timers[WUPDATE_RP_LEVELING].SetInterval(getIntConfig(CONFIG_RP_LEVELING_CHECK_INTERVAL) * IN_MILLISECONDS);
+
     m_timers[WUPDATE_PINGDB].SetInterval(getIntConfig(CONFIG_DB_PING_INTERVAL)*MINUTE*IN_MILLISECONDS);    // Mysql ping time in minutes
 
     //to set mailtimer to return mails every day between 4 and 5 am
@@ -1990,6 +1999,16 @@ void World::Update(uint32 diff)
         m_timers[WUPDATE_EVENTS].SetInterval(nextGameEvent);
         m_timers[WUPDATE_EVENTS].Reset();
     }
+
+	/// RP LEVELING
+	if(sWorld->getBoolConfig(CONFIG_RP_LEVELING))
+	{
+		if(m_timers[WUPDATE_RP_LEVELING].Passed())
+		{
+			m_timers[WUPDATE_RP_LEVELING].Reset();
+			sObjectAccessor->PlayerLevelForTime();
+		}
+	}
 
     ///- Ping to keep MySQL connections alive
     if (m_timers[WUPDATE_PINGDB].Passed())
