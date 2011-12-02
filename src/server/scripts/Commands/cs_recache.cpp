@@ -76,7 +76,7 @@ public:
 		return true;
 	};
 
-	static bool HandleRecacheCreatureCommand(ChatHandler* handler, const char* args)
+	static bool HandleReCacheCreatureCommand(ChatHandler* handler, const char* args)
 	{
 		if(!args)
 			return false;
@@ -121,7 +121,7 @@ public:
 		return true;
 	}
 
-	static bool HandleRecachePlayerNameCommand(ChatHandler* handler, const char* args)
+	static bool HandleReCachePlayerNameCommand(ChatHandler* handler, const char* args)
 	{
 		if(!args)
 			return false;
@@ -138,7 +138,7 @@ public:
 		return true;
 	}
 
-	static bool HandleRecacheGameObjectCommand(ChatHandler* handler, const char* args)
+	static bool HandleReCacheGameObjectCommand(ChatHandler* handler, const char* args)
 	{
 		if(!args)
 			return false;
@@ -181,7 +181,7 @@ public:
 		return true;
 	}
 
-	static bool HandleRecacheItemForAllCommand(ChatHandler* handler, const char* args)
+	static bool HandleReCacheItemForAllCommand(ChatHandler* handler, const char* args)
 	{
 		if(!args)
 			return false;
@@ -220,7 +220,7 @@ public:
 		return true;
 	}
 
-	static bool HandleRecacheCreatureForAllCommand(ChatHandler* handler, const char* args)
+	static bool HandleReCacheCreatureForAllCommand(ChatHandler* handler, const char* args)
 	{
 		if(!args)
 			return false;
@@ -259,7 +259,7 @@ public:
 		return true;
 	}
 
-	static bool HandleRecachePlayerNameForAllCommand(ChatHandler* handler, const char* args)
+	static bool HandleReCachePlayerNameForAllCommand(ChatHandler* handler, const char* args)
 	{
 		if(!args)
 			return false;
@@ -276,7 +276,7 @@ public:
 		return true;
 	}
 
-	static bool HandleRecacheGameObjectForAllCommand(ChatHandler* handler, const char* args)
+	static bool HandleReCacheGameObjectForAllCommand(ChatHandler* handler, const char* args)
 	{
 		if(!args)
 			return false;
