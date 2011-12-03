@@ -42,7 +42,14 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
         return false;
 	}
 
-	uint32 myacc = m_session->GetAccountId();
+	if(me == SelectedPlayer)
+	{
+		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
+		SetSentErrorMessage(true);
+		return false;
+	}
+
+	uint32 myacc = me->GetSession()->GetAccountId();
 	uint32 targetacc = SelectedPlayer->GetSession()->GetAccountId();
 
 	time_t now;
@@ -53,45 +60,15 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
 
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
-	QueryResult query2 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES('%u', '-1')", targetacc);
-	QueryResult query3 = CharacterDatabase.PQuery("INSERT INTO rep_system_check (sender, receiver, date) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
+	CharacterDatabase.PExecute("INSERT INTO `rep_system_check` (`sender`, `receiver`, `date`) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
 
-	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' + '1' WHERE account = %u", targetacc);
-
-	if(myacc != targetacc)
+	if(query1)
 	{
-		if(!query1)
-		{
-			if(!query2)
-			{
-				if(!query3)
-					return false;
-
-				return false;
-			}
-
-			return false;
-		}
-		else
-		{
-			if(!query4)
-			{
-				if(!query3)
-					return false;
-
-				return false;
-			}
-
-			return false;
-		}
-
-		return false;
+		CharacterDatabase.PExecute("UPDATE `rep_system` SET `points` = `points` + '1' WHERE `account` = '%u'", targetacc);
 	}
 	else
 	{
-		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
-		SetSentErrorMessage(true);
-		return false;
+		CharacterDatabase.PExecute("INSERT INTO `rep_system` (`account`, `points`) VALUES('%u', '-1')", targetacc);
 	}
 
 	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_ADD);
@@ -111,7 +88,14 @@ bool ChatHandler::HandleRepDelCommand(const char* args)
         return false;
 	}
 
-	uint32 myacc = m_session->GetAccountId();
+	if(me == SelectedPlayer)
+	{
+		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
+		SetSentErrorMessage(true);
+		return false;
+	}
+
+	uint32 myacc = me->GetSession()->GetAccountId();
 	uint32 targetacc = SelectedPlayer->GetSession()->GetAccountId();
 
 	time_t now;
@@ -122,43 +106,15 @@ bool ChatHandler::HandleRepDelCommand(const char* args)
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
 
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
-	QueryResult query2 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES('%u', '-1')", targetacc);
-	QueryResult query3 = CharacterDatabase.PQuery("INSERT INTO rep_system_check (sender, receiver, date) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
+	CharacterDatabase.PExecute("INSERT INTO `rep_system_check` (`sender`, `receiver`, `date`) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
 
-	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' - '1' WHERE account = %u", targetacc);
-
-	if(myacc != targetacc)
+	if(query1)
 	{
-		if(!query1)
-		{
-			if(!query2)
-			{
-				if(!query3)
-					return false;
-
-				return false;
-			}
-
-			return false;
-		}
-		else
-		{
-			if(!query4)
-			{
-				if(!query3)
-					return false;
-
-				return false;
-			}
-
-			return false;
-		}
+		CharacterDatabase.PExecute("UPDATE `rep_system` SET `points` = `points` - '1' WHERE `account` = '%u'", targetacc);
 	}
 	else
 	{
-		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
-		SetSentErrorMessage(true);
-		return false;
+		CharacterDatabase.PExecute("INSERT INTO `rep_system` (`account`, `points`) VALUES('%u', '-1')", targetacc);
 	}
 
 	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_DEL);
