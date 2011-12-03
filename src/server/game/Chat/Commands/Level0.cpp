@@ -59,6 +59,9 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
 	ts = *localtime(&now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
 
+	if(CharacterDatabase.PQuery("SELECT sender %u, receiver = %u FROM rep_system_check", myacc, targetacc))
+		return false;
+
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
 	CharacterDatabase.PExecute("INSERT INTO `rep_system_check` (`sender`, `receiver`, `date`) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
 
@@ -68,7 +71,7 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
 	}
 	else
 	{
-		CharacterDatabase.PExecute("INSERT INTO `rep_system` (`account`, `points`) VALUES('%u', '-1')", targetacc);
+		CharacterDatabase.PExecute("INSERT INTO `rep_system` (`account`, `points`) VALUES('%u', '1')", targetacc);
 	}
 
 	ChatHandler(SelectedPlayer).PSendSysMessage(LANG_REP_ADD);
@@ -105,6 +108,9 @@ bool ChatHandler::HandleRepDelCommand(const char* args)
 	ts = *localtime(&now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
 
+	if(CharacterDatabase.PQuery("SELECT sender %u, receiver = %u FROM rep_system_check", myacc, targetacc))
+		return false;
+
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
 	CharacterDatabase.PExecute("INSERT INTO `rep_system_check` (`sender`, `receiver`, `date`) VALUES('%u', '%u', '%s')", myacc, targetacc, buf);
 
@@ -133,18 +139,17 @@ bool ChatHandler::HandleRepInfoCommand(const char* args)
         return false;
 	}
 
-	uint32 playerguid = SelectedPlayer->GetGUIDLow();
-	uint32 paccid = SelectedPlayer->GetSession()->GetAccountId();
+	uint32 playeracc = SelectedPlayer->GetSession()->GetAccountId();
 	
-	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", paccid);
+	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", playeracc);
 
 	Field* result = query1->Fetch();
 	std::string points = result[0].GetString();
 
-	if(!query1)
-		PSendSysMessage(LANG_REP_HASNT_POINTS, SelectedPlayer->GetName());
-	else
+	if(query1)
 		PSendSysMessage(LANG_REP_SHOWINFO, SelectedPlayer->GetName(), points.c_str());
+	else
+		PSendSysMessage(LANG_REP_HASNT_POINTS, SelectedPlayer->GetName());
 
 	return true;
 }
