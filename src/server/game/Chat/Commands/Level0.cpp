@@ -42,8 +42,8 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
         return false;
 	}
 
-	uint32 myacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", me->GetGUIDLow());
-	uint32 targetacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", SelectedPlayer->GetGUIDLow());
+	uint32 myacc = m_session->GetAccountId();
+	uint32 targetacc = SelectedPlayer->GetSession()->GetAccountId();
 
 	time_t now;
 	struct tm ts;
@@ -58,19 +58,29 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
 
 	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' + '1' WHERE account = %u", targetacc);
 
-	if(myacc == targetacc)
+	if(myacc != targetacc)
 	{
-		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
-		SetSentErrorMessage(true);
-		return false;
-	}
-
-	if(!query1)
-	{
-		if(!query2)
+		if(!query1)
 		{
-			if(!query3)
+			if(!query2)
+			{
+				if(!query3)
+					return false;
+
 				return false;
+			}
+
+			return false;
+		}
+		else
+		{
+			if(!query4)
+			{
+				if(!query3)
+					return false;
+
+				return false;
+			}
 
 			return false;
 		}
@@ -79,14 +89,8 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
 	}
 	else
 	{
-		if(!query4)
-		{
-			if(!query3)
-				return false;
-
-			return false;
-		}
-
+		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
+		SetSentErrorMessage(true);
 		return false;
 	}
 
@@ -107,8 +111,8 @@ bool ChatHandler::HandleRepDelCommand(const char* args)
         return false;
 	}
 
-	uint32 myacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", me->GetGUIDLow());
-	uint32 targetacc = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", SelectedPlayer->GetGUIDLow());
+	uint32 myacc = m_session->GetAccountId();
+	uint32 targetacc = SelectedPlayer->GetSession()->GetAccountId();
 
 	time_t now;
 	struct tm ts;
@@ -123,35 +127,37 @@ bool ChatHandler::HandleRepDelCommand(const char* args)
 
 	QueryResult query4 = CharacterDatabase.PQuery("UPDATE rep_system SET points = 'points' - '1' WHERE account = %u", targetacc);
 
-	if(myacc == targetacc)
+	if(myacc != targetacc)
 	{
-		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
-		SetSentErrorMessage(true);
-		return false;
-	}
-
-	if(!query1)
-	{
-		if(!query2)
+		if(!query1)
 		{
-			if(!query3)
+			if(!query2)
+			{
+				if(!query3)
+					return false;
+
 				return false;
+			}
 
 			return false;
 		}
+		else
+		{
+			if(!query4)
+			{
+				if(!query3)
+					return false;
 
-		return false;
+				return false;
+			}
+
+			return false;
+		}
 	}
 	else
 	{
-		if(!query4)
-		{
-			if(!query3)
-				return false;
-
-			return false;
-		}
-
+		SendSysMessage(LANG_REP_CANT_TARGET_SELF);
+		SetSentErrorMessage(true);
 		return false;
 	}
 
@@ -172,7 +178,7 @@ bool ChatHandler::HandleRepInfoCommand(const char* args)
 	}
 
 	uint32 playerguid = SelectedPlayer->GetGUIDLow();
-	uint32 paccid = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", playerguid);
+	uint32 paccid = SelectedPlayer->GetSession()->GetAccountId();
 	
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", paccid);
 

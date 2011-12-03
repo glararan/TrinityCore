@@ -75,7 +75,7 @@ bool ChatHandler::HandleRepResetCommand(const char* /*args*/)
     }
 
     uint32 playerid = SelectedPlayer->GetGUIDLow();
-	uint32 accountid = CharacterDatabase.PQuery("SELECT account FROM characters WHERE guid = %u", playerid);
+	uint32 accountid = SelectedPlayer->GetSession()->GetAccountId();
 
 	QueryResult select = CharacterDatabase.PQuery("SELECT * FROM rep_system WHERE account = %u", accountid);
 	QueryResult query1 = CharacterDatabase.PQuery("INSERT INTO rep_system (account, points) VALUES(%u, '0')", accountid);
