@@ -16569,7 +16569,7 @@ bool Player::LoadFromDB(uint32 guid, SQLQueryHolder *holder)
 	}
 	else
 	{
-		CharacterDatabase.PExecute("INSERT INTO character_scale VALUES(%u, 1, Basic Scale)", GetGUID());
+		CharacterDatabase.PExecute("INSERT INTO character_scale VALUES(%u, 1, 'Basic Scale')", GetGUID());
 		SetFloatValue(OBJECT_FIELD_SCALE_X, 1.0f);
 	}
 
