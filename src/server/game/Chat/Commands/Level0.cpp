@@ -59,7 +59,7 @@ bool ChatHandler::HandleRepAddCommand(const char* args)
 	ts = *localtime(&now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
 
-	if(CharacterDatabase.PQuery("SELECT sender %u, receiver = %u FROM rep_system_check", myacc, targetacc))
+	if(CharacterDatabase.PQuery("SELECT sender = %u, receiver = %u FROM rep_system_check", myacc, targetacc))
 		return false;
 
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
@@ -108,7 +108,7 @@ bool ChatHandler::HandleRepDelCommand(const char* args)
 	ts = *localtime(&now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
 
-	if(CharacterDatabase.PQuery("SELECT sender %u, receiver = %u FROM rep_system_check", myacc, targetacc))
+	if(CharacterDatabase.PQuery("SELECT sender = %u, receiver = %u FROM rep_system_check", myacc, targetacc))
 		return false;
 
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", targetacc);
