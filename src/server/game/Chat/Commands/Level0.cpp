@@ -144,10 +144,10 @@ bool ChatHandler::HandleRepInfoCommand(const char* args)
 	QueryResult query1 = CharacterDatabase.PQuery("SELECT points FROM rep_system WHERE account = %u", playeracc);
 
 	Field* result = query1->Fetch();
-	std::string points = result[0].GetString();
+	uint32 points = result[0].GetUInt32();
 
 	if(query1)
-		PSendSysMessage(LANG_REP_SHOWINFO, SelectedPlayer->GetName(), points.c_str());
+		PSendSysMessage(LANG_REP_SHOWINFO, SelectedPlayer->GetName(), points);
 	else
 		PSendSysMessage(LANG_REP_HASNT_POINTS, SelectedPlayer->GetName());
 
