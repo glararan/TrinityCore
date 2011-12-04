@@ -16548,7 +16548,7 @@ bool Player::LoadFromDB(uint32 guid, SQLQueryHolder *holder)
     // set which actionbars the client has active - DO NOT REMOVE EVER AGAIN (can be changed though, if it does change fieldwise)
     SetByteValue(PLAYER_FIELD_BYTES, 2, fields[65].GetUInt8());
 
-	// MORPH
+	// MORPH System
 	QueryResult result2 = CharacterDatabase.PQuery("SELECT morph FROM character_morph WHERE guid = %u", fields[0].GetUInt32());
 	if(result2)
 	{
@@ -16559,13 +16559,12 @@ bool Player::LoadFromDB(uint32 guid, SQLQueryHolder *holder)
 	else
 		InitDisplayIds();
 
-	// SCALE
-	QueryResult result3 = CharacterDatabase.PQuery("SELECT scale FROM character_scale WHERE guid = %u", fields[0].GetFloat());
+	// SCALE System
+	QueryResult result3 = CharacterDatabase.PQuery("SELECT scale FROM character_scale WHERE guid = %u", fields[0].GetUInt32());
 	if(result3)
 	{
 		Field* fields3 = result3->Fetch();
-		float Scale = fields3[0].GetFloat();
-		SetFloatValue(OBJECT_FIELD_SCALE_X, Scale);
+		SetFloatValue(OBJECT_FIELD_SCALE_X, (float)fields3[0].GetUInt32());
 	}
 	else
 	{
